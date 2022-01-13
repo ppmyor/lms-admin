@@ -58,11 +58,13 @@ label {
     border: 1px solid rgb(133, 132, 132);
     border-radius: 5px;
     margin-top: 5px;
+    padding: 0 10px;
     height: 40px;
 }
 
 /* About login form - login keep */
 #login-keep {
+    width: 100px;
     margin-top: 15px;
     font-size: 12px;
     font-weight: 400;
@@ -88,10 +90,22 @@ label {
 
 /* About login form - register */
 #register {
-    font-size: 15px;
+    width: 600px;
+    margin-top: 20px;
+}
+
+#register-desc {
+    font-size: 14px;
     font-weight: 400;
 }
 
-#register:hover {
+#register-link {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#register-link:hover {
     cursor: pointer;
+    color: rgb(96, 105, 236);
 }
