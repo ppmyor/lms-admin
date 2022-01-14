@@ -49,11 +49,16 @@ label {
 
 /* About sign up form - input */
 #signup-form input {
-    border: 0.5px solid rgb(212, 212, 212);
+    border: 1px solid rgb(212, 212, 212);
     border-radius: 5px;
     margin-top: 5px;
     padding: 0 10px;
     height: 40px;
+    transition: border 300ms ease-in-out;
+}
+
+#signup-form input:focus {
+    border: 1px solid rgb(96, 105, 236);
 }
 
 /* About login form - login button */
