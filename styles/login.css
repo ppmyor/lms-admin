@@ -114,9 +114,9 @@ label {
     display: inline-block;
     font-size: 14px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 #register-link:hover {
-    cursor: pointer;
     color: rgb(96, 105, 236);
 }
