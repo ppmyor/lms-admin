@@ -49,14 +49,14 @@ body {
 /* About login form - label */
 label {
     text-align: left;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 400;
     margin-top: 10px;
 }
 
 /* About login form - input */
 #login-form input {
-    border: 1px solid rgb(133, 132, 132);
+    border: 0.5px solid rgb(212, 212, 212);
     border-radius: 5px;
     margin-top: 5px;
     padding: 0 10px;
