@@ -18,11 +18,11 @@ body {
 /* About all login form */
 #login {
     background-color: #fff;
-    width: 600px;
+    width: 90%;
     height: auto;
-    padding: 60px;
+    padding: 60px 20px;
     border-radius: 20px;
-    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    box-shadow: 5px 5px 15px #d9d9d9, -5px -5px 15px #ffffff;
     transition: transform 300ms ease-in-out;
 }
 
@@ -32,35 +32,35 @@ body {
 
 /* About login title & description */
 .login-desc h2 {
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 500;
     line-height: 1.5;
 }
 
 .login-desc h4 {
-    font-size: 15px;
+    font-size: 12px;
     font-weight: 500;
     line-height: 1.5;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 /* About login form */
 #login-form {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding-top: 10px;
 }
 
-/* About login form - label */
-label {
+/* About login form - login label */
+.login-label {
     text-align: left;
     font-size: 12px;
     font-weight: 400;
     margin-top: 10px;
 }
 
-/* About login form - input */
-#login-form input {
+/* About login form - login form input */
+.login-label ~ input {
     border: 1px solid rgb(212, 212, 212);
     border-radius: 5px;
     margin-top: 5px;
@@ -74,12 +74,18 @@ label {
 }
 
 /* About login form - login keep */
-#login-keep {
-    width: 100px;
-    margin-top: 15px;
+#login-keep-frame {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#login-keep + label {
+    display: block;
+    margin-left: 7px;
     font-size: 12px;
     font-weight: 400;
-    cursor: pointer;
 }
 
 /* About login form - login button */
@@ -101,7 +107,7 @@ label {
 
 /* About login form - register */
 #register {
-    width: 600px;
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -114,9 +120,144 @@ label {
     display: inline-block;
     font-size: 14px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 #register-link:hover {
-    cursor: pointer;
     color: rgb(96, 105, 236);
+}
+
+/* media query - Tablets */
+@media screen and (min-width: 768px) {
+    /* About all login form */
+    #login {
+        width: 80%;
+        padding: 100px 55px;
+    }
+
+    /* About login title & description */
+    .login-desc h2 {
+        font-size: 28px;
+    }
+
+    .login-desc h4 {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    /* About login form */
+    #login-form {
+        padding-top: 30px;
+    }
+
+    /* About login form - login label */
+    .login-label {
+        font-size: 14px;
+    }
+
+    /* About login form - login form input */
+    .login-label ~ input {
+        margin-top: 5px;
+        padding: 0 10px;
+        height: 44px;
+    }
+
+    /* About login form - login keep */
+    #login-keep-frame {
+        margin-top: 20px;
+    }
+
+    #login-keep + label {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    /* About login form - login button */
+    #login-button {
+        font-size: 14px;
+        height: 44px;
+    }
+
+    /* About login form - register */
+    #register {
+        margin-top: 24px;
+    }
+
+    #register-desc {
+        font-size: 15px;
+    }
+
+    #register-link {
+        font-size: 15px;
+    }
+}
+
+/* media query - laptops */
+@media screen and (min-width: 992px) {
+    /* About all login form */
+    #login {
+        width: 60%;
+        padding: 100px 65px;
+    }
+
+    /* About login title & description */
+    .login-desc h2 {
+        font-size: 34px;
+    }
+
+    .login-desc h4 {
+        font-size: 16px;
+        margin-top: 40px;
+    }
+
+    /* About login form */
+    #login-form {
+        padding-top: 40px;
+    }
+
+    /* About login form - login label */
+    .login-label {
+        font-size: 15px;
+    }
+
+    /* About login form - login form input */
+    .login-label ~ input {
+        margin-top: 8px;
+        padding: 0 15px;
+        height: 46px;
+    }
+
+    #user-id {
+        margin-bottom: 10px;
+    }
+
+    /* About login form - login keep */
+    #login-keep-frame {
+        margin-top: 20px;
+    }
+
+    #login-keep + label {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    /* About login form - login button */
+    #login-button {
+        font-size: 15px;
+        height: 48px;
+        margin-top: 35px;
+    }
+
+    /* About login form - register */
+    #register {
+        margin-top: 24px;
+    }
+
+    #register-desc {
+        font-size: 16px;
+    }
+
+    #register-link {
+        font-size: 16px;
+    }
 }
