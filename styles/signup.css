@@ -13,11 +13,11 @@ body {
 /* About sign up frame */
 #signup {
     background-color: #fff;
-    width: 600px;
+    width: 90%;
     height: auto;
-    padding: 60px;
+    padding: 45px 20px;
     border-radius: 20px;
-    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    box-shadow: 5px 5px 15px #d9d9d9, -5px -5px 15px #ffffff;
     transition: transform 300ms ease-in-out;
 }
 
@@ -26,17 +26,24 @@ body {
 }
 
 /* About sign up description */
-#signup-desc {
-    font-size: 25px;
+#signup h2 {
+    font-size: 24px;
     font-weight: 500;
     line-height: 1.5;
-    margin-top: 30px;
 }
+
+#signup h4 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 15px;
+}
+
 /* About sign up form */
 #signup-form {
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding-top: 10px;
 }
 
 /* About sign up form - label */
@@ -44,7 +51,7 @@ label {
     text-align: left;
     font-size: 12px;
     font-weight: 400;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 /* About sign up form - input */
@@ -76,4 +83,89 @@ label {
 
 #signup-button:hover {
     background-color: rgb(71, 79, 190);
+}
+
+/* media query - Tablets */
+@media screen and (min-width: 768px) {
+    /* About sign up frame */
+    #signup {
+        width: 80%;
+        padding: 80px 55px;
+    }
+
+    /* About sign up description */
+    #signup h2 {
+        font-size: 28px;
+    }
+
+    #signup h4 {
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    /* About sign up form */
+    #signup-form {
+        padding-top: 30px;
+    }
+
+    /* About sign up form - label */
+    label {
+        font-size: 14px;
+    }
+
+    /* About sign up form - input */
+    #signup-form input {
+        height: 44px;
+    }
+
+    /* About login form - login button */
+    #signup-button {
+        font-size: 14px;
+        height: 44px;
+        margin-top: 30px;
+    }
+}
+
+/* media query - laptops */
+@media screen and (min-width: 992px) {
+    /* About sign up frame */
+    #signup {
+        width: 35%;
+        padding: 80px 65px;
+    }
+
+    /* About sign up description */
+    #signup h2 {
+        font-size: 34px;
+    }
+
+    #signup h4 {
+        font-size: 20px;
+        margin-top: 30px;
+    }
+
+    /* About sign up form */
+    #signup-form {
+        padding-top: 40px;
+    }
+
+    /* About sign up form - label */
+    label {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+
+    /* About sign up form - input */
+    #signup-form input {
+        margin-top: 8px;
+        padding: 0 15px;
+        height: 46px;
+    }
+
+    /* About login form - login button */
+    #signup-button {
+        font-size: 15px;
+        height: 48px;
+        margin-top: 35px;
+    }
 }
