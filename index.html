@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LMS Admin - Main</title>
+        <script src="https://kit.fontawesome.com/c2252b4ab1.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="logo-image">
+                <!-- 로고 이미지 삽입 -->
+                <img src="./assets/images/biblic_logo.png" alt="로고" />
+            </h1>
+            <div class="user-info">
+                <img src="./assets/images/user.jpeg" alt="유저 프로필 이미지" class="user-image" />
+                <i class="fas fa-chevron-down"></i>
+                <ul class="user-info-selector">
+                    <li id="my-frofile">내 프로필</li>
+                    <li id="logout">로그아웃</li>
+                </ul>
+            </div>
+        </header>
+
+        <nav>
+            <h1 class="proj-title">프로젝트 목록</h1>
+
+            <ul>
+                <li id="1-proj-folder">
+                    <a href="#">내 프로젝트</a>
+                </li>
+            </ul>
+
+            <div class="make-proj">
+                <a href="#">프로젝트 만들기</a>
+            </div>
+        </nav>
+
+        <main>
+            <ul>
+                <li>
+                    <h3 id="1-content-name">defalut proj</h3>
+                    <span><i class="fas fa-ellipsis-h"></i></span>
+                    <ul class="content-selector">
+                        <li id="content-delete">컨텐츠 삭제</li>
+                    </ul>
+                </li>
+            </ul>
+        </main>
+    </body>
+</html>
