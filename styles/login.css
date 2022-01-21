@@ -25,18 +25,21 @@ body {
     transform: translateY(-3px);
 }
 
-/* About login title & description */
-.login-desc h2 {
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 1.5;
+/* About logo image */
+.logo-image {
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
 }
 
-.login-desc h4 {
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 1.5;
-    margin-top: 15px;
+.logo-image a {
+    display: block;
+    cursor: pointer;
+}
+
+.logo-image img {
+    width: 100%;
+    height: auto;
 }
 
 /* About login form */
@@ -130,14 +133,10 @@ body {
         padding: 100px 55px;
     }
 
-    /* About login title & description */
-    .login-desc h2 {
-        font-size: 28px;
-    }
-
-    .login-desc h4 {
-        font-size: 16px;
-        margin-top: 30px;
+    /* About logo image */
+    .logo-image {
+        width: 320px;
+        height: 80px;
     }
 
     /* About login form */
@@ -195,14 +194,10 @@ body {
         padding: 100px 65px;
     }
 
-    /* About login title & description */
-    .login-desc h2 {
-        font-size: 34px;
-    }
-
-    .login-desc h4 {
-        font-size: 16px;
-        margin-top: 40px;
+    /* About logo image */
+    .logo-image {
+        width: 360px;
+        height: 90px;
     }
 
     /* About login form */
