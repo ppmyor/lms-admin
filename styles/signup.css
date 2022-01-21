@@ -25,18 +25,21 @@ body {
     transform: translateY(-3px);
 }
 
-/* About sign up description */
-#signup h2 {
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 1.5;
+/* About logo image */
+#signup .logo-image {
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
 }
 
-#signup h4 {
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 1.5;
-    margin-top: 15px;
+#signup .logo-image a {
+    display: block;
+    cursor: pointer;
+}
+
+#signup .logo-image img {
+    width: 100%;
+    height: auto;
 }
 
 /* About sign up form */
@@ -93,14 +96,10 @@ label {
         padding: 80px 55px;
     }
 
-    /* About sign up description */
-    #signup h2 {
-        font-size: 28px;
-    }
-
-    #signup h4 {
-        font-size: 18px;
-        margin-top: 20px;
+    /* About logo image */
+    #signup .logo-image {
+        width: 320px;
+        height: 80px;
     }
 
     /* About sign up form */
@@ -134,14 +133,10 @@ label {
         padding: 80px 65px;
     }
 
-    /* About sign up description */
-    #signup h2 {
-        font-size: 34px;
-    }
-
-    #signup h4 {
-        font-size: 20px;
-        margin-top: 30px;
+    /* About logo image */
+    #signup .logo-image {
+        width: 360px;
+        height: 90px;
     }
 
     /* About sign up form */
