@@ -25,11 +25,29 @@ body {
     transition: transform 300ms ease-in-out;
 }
 
+/* About logo image */
+.logo-image {
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.logo-image a {
+    display: block;
+    cursor: pointer;
+}
+
+.logo-image img {
+    width: 100%;
+    height: auto;
+}
+
 /* About success description */
 #success-desc {
-    font-size: 20px;
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
+    margin-top: 18px;
 }
 
 /* About success description - button */
@@ -59,9 +77,16 @@ body {
         padding: 80px 50px;
     }
 
+    /* About logo image */
+    .logo-image {
+        width: 320px;
+        height: 80px;
+    }
+
     /* About success description */
     #success-desc {
-        font-size: 28px;
+        font-size: 20px;
+        margin-top: 25px;
     }
 
     /* About success description - button */
@@ -80,15 +105,22 @@ body {
         padding: 100px 80px;
     }
 
+    /* About logo image */
+    .logo-image {
+        width: 360px;
+        height: 90px;
+    }
+
     /* About success description */
     #success-desc {
-        font-size: 30px;
+        font-size: 22px;
+        margin: 30px;
     }
 
     /* About success description - button */
     #login-link {
         font-size: 15px;
         padding: 14px 0;
-        margin-top: 45px;
+        margin-top: 20px;
     }
 }
