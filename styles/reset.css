@@ -44,3 +44,25 @@ a {
 .mobile-selector {
     display: none;
 }
+
+/* media query - Tablets */
+@media screen and (min-width: 768px) {
+    .mobile-icon {
+        display: none;
+    }
+
+    .mobile-selector {
+        display: block;
+    }
+}
+
+/* media query - laptops */
+@media screen and (min-width: 992px) {
+    .mobile-icon {
+        display: none;
+    }
+
+    .mobile-selector {
+        display: block;
+    }
+}

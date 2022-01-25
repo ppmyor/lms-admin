@@ -11,7 +11,7 @@
     </head>
     <body>
         <header>
-            <div class="mobile-menu">
+            <div class="mobile-menu mobile-icon">
                 <i class="fas fa-bars"></i>
             </div>
             <h1 class="logo-image">
@@ -26,26 +26,29 @@
             </div>
         </header>
 
-        <nav class="mobile-selector">
-            <h1 class="proj-title">프로젝트 목록</h1>
-            <ul>
-                <li id="1-proj-folder">
-                    <a href="#">내 프로젝트</a>
-                </li>
-            </ul>
+        <div class="main-dashboard">
+            <nav class="proj-nav mobile-selector">
+                <div class="make-proj">
+                    <a href="#"> <i class="fas fa-plus-circle"></i>프로젝트 만들기</a>
+                </div>
+                <h1 class="proj-title">프로젝트 목록</h1>
+                <ul>
+                    <li id="1-proj-folder">
+                        <div class="proj-folder">
+                            <a href="#">내 프로젝트</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
 
-            <div class="make-proj">
-                <a href="#">프로젝트 만들기</a>
-            </div>
-        </nav>
-
-        <main>
-            <ul class="contents-card-list">
-                <li class="contents-card">
-                    <h3 id="1-content" class="content-title">defalut proj</h3>
-                    <span class="delete-button"><i class="far fa-trash-alt"></i></span>
-                </li>
-            </ul>
-        </main>
+            <main class="content-area">
+                <ul class="contents-card-list">
+                    <li class="contents-card">
+                        <h3 id="1-content" class="content-title">defalut proj</h3>
+                        <span class="delete-button"><i class="far fa-trash-alt"></i></span>
+                    </li>
+                </ul>
+            </main>
+        </div>
     </body>
 </html>
