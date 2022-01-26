@@ -80,6 +80,7 @@ header {
     align-items: center;
     position: relative;
     transition: transform 300ms ease-in-out;
+    cursor: pointer;
 }
 
 .contents-card:hover {
@@ -100,6 +101,7 @@ header {
     right: 20px;
     font-size: 15px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 /* media query - Tablets */
@@ -169,18 +171,14 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
         height: 120px;
         margin: 20px 10px;
         border: 2px dashed rgb(96, 105, 236);
         border-radius: 10px;
         transition: transform 300ms ease-in-out;
-    }
-
-    .proj-folder a {
-        display: block;
-        font-size: 18px;
-        font-weight: 500;
-        line-height: 1.5;
     }
 
     .proj-folder:hover {
