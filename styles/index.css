@@ -79,6 +79,11 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
+    transition: transform 300ms ease-in-out;
+}
+
+.contents-card:hover {
+    transform: translateY(-3px);
 }
 
 /* About content card title */
@@ -93,6 +98,8 @@ header {
     position: absolute;
     bottom: 20px;
     right: 20px;
+    font-size: 15px;
+    font-weight: 500;
 }
 
 /* media query - Tablets */
@@ -144,10 +151,12 @@ header {
         background-color: rgb(96, 105, 236);
         border-radius: 30px;
         cursor: pointer;
+        transition: transform 300ms ease-in-out;
     }
 
     .make-proj a:hover {
         background-color: rgb(71, 79, 190);
+        transform: translateY(-3px);
     }
 
     /* About project title */
@@ -164,6 +173,7 @@ header {
         margin: 20px 10px;
         border: 2px dashed rgb(96, 105, 236);
         border-radius: 10px;
+        transition: transform 300ms ease-in-out;
     }
 
     .proj-folder a {
@@ -174,6 +184,7 @@ header {
     }
 
     .proj-folder:hover {
+        transform: translateY(-3px);
         background-color: rgb(71, 79, 190);
         border: none;
         color: #fff;
