@@ -15,6 +15,7 @@ header {
     align-items: center;
     padding: 0 20px;
     background-color: rgb(236, 236, 236);
+    position: relative;
 }
 
 /* About logo image */
@@ -34,12 +35,40 @@ header {
     height: auto;
 }
 
+/* !!!user information!!! */
 /* About user profile image */
 .user-info .user-image {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+/* About user info list */
+.user-info-selector {
+    background-color: #fff;
+    box-shadow: 5px 5px 15px #d9d9d9, -5px -5px 15px #ffffff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: 1;
+}
+
+.user-info-selector li {
+    border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+.user-info-selector li:last-child {
+    border-bottom: none;
+}
+
+#my-profile,
+#logout button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgb(85, 85, 85);
 }
 
 /* About mobile-menu-bar */
@@ -148,9 +177,23 @@ header {
         margin: 0;
     }
 
+    /* !!!user information!!! */
+    /* About user profile image */
     .user-info .user-image {
         width: 50px;
         height: 50px;
+    }
+
+    /* About user info list */
+    .user-info-selector {
+        top: 100px;
+        right: 10px;
+    }
+
+    #my-profile,
+    #logout button {
+        padding: 10px 30px;
+        font-size: 16px;
     }
 
     /* !!!NAV & MAIN!!! */
@@ -241,6 +284,12 @@ header {
 
 /* media query - laptops */
 @media screen and (min-width: 992px) {
+    /* !!!user information!!! */
+    /* About user info list */
+    .user-info-selector {
+        font-size: 16px;
+    }
+
     /* !!!NAV!!! */
     .proj-nav {
         width: 250px;

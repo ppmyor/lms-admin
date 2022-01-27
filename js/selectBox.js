@@ -4,9 +4,16 @@ const mobileGoToMainButton = document.querySelector(".go-main-button");
 const projectNav = document.querySelector(".proj-nav");
 const mainArea = document.querySelector(".content-area");
 
-// Mobile Project Bar - selector
+// user information - selector
+const userImage = document.querySelector(".user-image");
+const userInfoList = document.querySelector(".user-info-selector");
+
+// Related Mobile selector
 const TOGGLE_BUTTON_CLASSNAME = "toggle-button";
-const TOGGLE_SELECTOR_CLASSNAME = "mobile-selector";
+const TOGGLE_MOBILE_SELECTOR_CLASSNAME = "mobile-selector";
+
+// Related selector
+const TOGGLE_SELECTOR_CLASSNAME = "selector";
 
 // mobile toggle MAIN - NAV
 mobileProjectBarButton.addEventListener("click", function () {
@@ -17,10 +24,20 @@ mobileGoToMainButton.addEventListener("click", function () {
     toggleProjectButton();
 });
 
+// toggle user image info
+userImage.addEventListener("click", function () {
+    toggleUserInfoButton();
+});
+
 // mobile toggle MAIN - NAV
 function toggleProjectButton() {
     mobileProjectBarButton.classList.toggle(TOGGLE_BUTTON_CLASSNAME);
     mobileGoToMainButton.classList.toggle(TOGGLE_BUTTON_CLASSNAME);
-    projectNav.classList.toggle(TOGGLE_SELECTOR_CLASSNAME);
-    mainArea.classList.toggle(TOGGLE_SELECTOR_CLASSNAME);
+    projectNav.classList.toggle(TOGGLE_MOBILE_SELECTOR_CLASSNAME);
+    mainArea.classList.toggle(TOGGLE_MOBILE_SELECTOR_CLASSNAME);
+}
+
+// toggle user image info
+function toggleUserInfoButton() {
+    userInfoList.classList.toggle(TOGGLE_SELECTOR_CLASSNAME);
 }
