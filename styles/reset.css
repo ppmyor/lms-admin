@@ -45,6 +45,10 @@ a {
     display: none;
 }
 
+.toggle-button {
+    display: none;
+}
+
 /* media query - Tablets */
 @media screen and (min-width: 768px) {
     .mobile-icon {

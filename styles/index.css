@@ -1,7 +1,7 @@
 body {
     width: 100%;
     height: auto;
-    color: rgb(49, 49, 49);
+    color: rgb(85, 85, 85);
     background-color: #fff;
 }
 
@@ -43,14 +43,40 @@ header {
 }
 
 /* About mobile-menu-bar */
-.fa-bars {
+.proj-bar-button {
     font-size: 20px;
     cursor: pointer;
 }
 
-/* !!!NAV & MAIN!!! */
-.main-dashboard {
-    margin: 30px 20px;
+.go-main-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* !!!NAV!!! */
+.proj-nav {
+    width: 100%;
+    height: 100vh;
+}
+
+.proj-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* About project title */
+.proj-title {
+    display: none;
+}
+
+.make-proj,
+.proj-folder {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    padding: 25px 0 25px 20px;
 }
 
 /* !!!MAIN!!! */
@@ -66,6 +92,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 20px;
 }
 
 .contents-card {
@@ -130,6 +157,7 @@ header {
     .main-dashboard {
         display: flex;
         flex-direction: row;
+        margin: 30px 20px;
     }
 
     /* !!!NAV!!! */
@@ -139,6 +167,13 @@ header {
         flex-shrink: 0;
         text-align: center;
         margin: 0 20px;
+    }
+
+    /* mobile style reset */
+    .make-proj,
+    .proj-folder {
+        border: none;
+        padding: 0;
     }
 
     /* About make project button */
@@ -159,11 +194,6 @@ header {
     .make-proj a:hover {
         background-color: rgb(71, 79, 190);
         transform: translateY(-3px);
-    }
-
-    /* About project title */
-    .proj-title {
-        display: none;
     }
 
     /* About Project folder */
@@ -201,6 +231,7 @@ header {
         flex-direction: row;
         justify-content: flex-start;
         flex-wrap: wrap;
+        margin: 0;
     }
 
     .contents-card {
@@ -228,13 +259,6 @@ header {
     }
 
     /* About contents card */
-    .contents-card-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-    }
-
     .contents-card {
         width: 350px;
         height: 350px;
