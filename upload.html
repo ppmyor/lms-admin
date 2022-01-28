@@ -4,10 +4,9 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>LMS Admin - Main</title>
+        <title>LMS Admin - Upload</title>
         <script src="https://kit.fontawesome.com/c2252b4ab1.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./styles/reset.css" />
-        <link rel="stylesheet" href="./styles/index.css" />
     </head>
     <body>
         <header>
@@ -18,6 +17,7 @@
             <h1 class="logo-image">
                 <a href="./index.html"> <img src="./assets/images/biblic_logo.png" alt="로고" /></a>
             </h1>
+            <input type="text" class="content-title-modify" placeholder="my project" />
             <div class="user-info">
                 <img src="./assets/images/user.jpeg" alt="유저 프로필 이미지" class="user-image" />
                 <ul class="user-info-selector selector">
@@ -26,13 +26,9 @@
                 </ul>
             </div>
         </header>
-
         <div class="main-dashboard">
             <nav class="proj-nav mobile-selector">
                 <div class="proj-list">
-                    <div class="make-proj">
-                        <a href="./upload.html"> <i class="fas fa-plus-circle"></i> 프로젝트 만들기</a>
-                    </div>
                     <h1 class="proj-title">프로젝트 목록</h1>
                     <ul>
                         <li id="1-proj-folder">
@@ -44,13 +40,12 @@
                 </div>
             </nav>
 
-            <main class="content-area">
-                <ul class="contents-card-list">
-                    <li class="contents-card">
-                        <h3 id="1-content" class="content-title">defalut proj</h3>
-                        <button class="delete-button"><i class="far fa-trash-alt"></i></button>
-                    </li>
-                </ul>
+            <main class="upload-area">
+                <div class="image-upload-area">
+                    <label for="input-file"><i class="fas fa-plus-circle"></i> 이미지 올리기</label>
+                    <input type="file" accept="image/*" multiple class="input-file" />
+                </div>
+                <button type="button">다음</button>
             </main>
         </div>
         <script src="./js/selectBox.js"></script>
