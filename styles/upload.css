@@ -1,0 +1,292 @@
+body {
+    width: 100%;
+    height: auto;
+    color: rgb(85, 85, 85);
+    background-color: #fff;
+}
+
+/* !!!HEADER!!! */
+/* About Main header frame */
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(236, 236, 236);
+    position: relative;
+}
+
+/* About logo image */
+.logo-image {
+    width: 160px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.logo-image a {
+    display: block;
+    cursor: pointer;
+}
+
+.logo-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* !!!user information!!! */
+/* About user profile image */
+.user-info .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* About user info list */
+.user-info-selector {
+    background-color: #fff;
+    box-shadow: 5px 5px 15px #d9d9d9, -5px -5px 15px #ffffff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: 1;
+}
+
+.user-info-selector li {
+    border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+.user-info-selector li:last-child {
+    border-bottom: none;
+}
+
+#my-profile,
+#logout button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgb(85, 85, 85);
+}
+
+/* About mobile-menu-bar */
+.proj-bar-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.go-main-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* !!!NAV!!! */
+.proj-nav {
+    width: 100%;
+    height: 100vh;
+}
+
+.proj-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* About project title */
+.proj-title {
+    display: none;
+}
+
+.proj-folder {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    padding: 25px 0 25px 20px;
+}
+
+/* !!!MAIN!!! */
+/* About main image upload frame */
+.content-area {
+    margin: 40px 50px 0;
+}
+
+/* image upload area */
+.image-upload-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed rgb(96, 105, 236);
+    border-radius: 10px;
+    height: 320px;
+    position: relative;
+}
+
+/* upload file area - file box label */
+.image-upload-area label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: inherit;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* upload file area - file box css reset */
+.image-upload-area input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+
+.image-upload-area .upload-name {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgb(165, 165, 165);
+    text-align: center;
+}
+
+.image-upload-area:hover {
+    background-color: rgb(71, 79, 190);
+    border: 2px solid rgb(71, 79, 190);
+    color: #fff;
+}
+
+/* go to main dashboard button */
+#next-button {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 400;
+    color: #fff;
+    height: 40px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(96, 105, 236);
+    cursor: pointer;
+}
+
+/* media query - Tablets */
+@media screen and (min-width: 768px) {
+    /* !!!HEADER!!! */
+    /* About Main header frame */
+    header {
+        height: 100px;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+
+    /* About logo image */
+    .logo-image {
+        width: 200px;
+        height: 50px;
+        margin: 0;
+    }
+
+    /* !!!user information!!! */
+    /* About user profile image */
+    .user-info .user-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* About user info list */
+    .user-info-selector {
+        top: 100px;
+        right: 10px;
+    }
+
+    #my-profile,
+    #logout button {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    /* !!!NAV & MAIN!!! */
+    .main-dashboard {
+        display: flex;
+        flex-direction: row;
+        margin: 30px 20px;
+    }
+
+    /* !!!NAV!!! */
+    .proj-nav {
+        width: 200px;
+        height: auto;
+        flex-shrink: 0;
+        text-align: center;
+        margin: 0 20px;
+    }
+
+    /* mobile style reset */
+    .proj-folder {
+        border: none;
+        padding: 0;
+    }
+
+    /* About Project folder */
+    .proj-folder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        height: 120px;
+        margin: 20px 10px;
+        border: 2px dashed rgb(96, 105, 236);
+        border-radius: 10px;
+        transition: transform 300ms ease-in-out;
+    }
+
+    .proj-folder:hover {
+        transform: translateY(-3px);
+        background-color: rgb(71, 79, 190);
+        border: none;
+        color: #fff;
+    }
+
+    /* !!!MAIN!!! */
+    /* About cotents frame */
+    .content-area {
+        width: 100%;
+        margin: 0 20px;
+    }
+}
+
+/* media query - laptops */
+@media screen and (min-width: 992px) {
+    /* !!!user information!!! */
+    /* About user info list */
+    .user-info-selector {
+        font-size: 16px;
+    }
+
+    /* !!!NAV!!! */
+    .proj-nav {
+        width: 250px;
+        margin: 0 30px;
+    }
+
+    /* About Project folder */
+    .proj-folder {
+        height: 160px;
+    }
+
+    /* !!!MAIN!!! */
+    /* About cotents frame */
+    .content-area {
+        margin: 0 30px;
+    }
+}

@@ -7,6 +7,7 @@
         <title>LMS Admin - Upload</title>
         <script src="https://kit.fontawesome.com/c2252b4ab1.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/upload.css" />
     </head>
     <body>
         <header>
@@ -17,7 +18,6 @@
             <h1 class="logo-image">
                 <a href="./index.html"> <img src="./assets/images/biblic_logo.png" alt="로고" /></a>
             </h1>
-            <input type="text" class="content-title-modify" placeholder="my project" />
             <div class="user-info">
                 <img src="./assets/images/user.jpeg" alt="유저 프로필 이미지" class="user-image" />
                 <ul class="user-info-selector selector">
@@ -40,12 +40,13 @@
                 </div>
             </nav>
 
-            <main class="upload-area">
+            <main class="content-area">
                 <div class="image-upload-area">
-                    <label for="input-file"><i class="fas fa-plus-circle"></i> 이미지 올리기</label>
-                    <input type="file" accept="image/*" multiple class="input-file" />
+                    <label for="upload-file"><i class="fas fa-plus-circle"></i> 이미지 올리기</label>
+                    <input type="file" id="upload-file" accept="image/*" multiple />
+                    <input class="upload-name" value="첨부파일" readonly />
                 </div>
-                <button type="button">다음</button>
+                <button type="button" id="next-button">다음</button>
             </main>
         </div>
         <script src="./js/selectBox.js"></script>
