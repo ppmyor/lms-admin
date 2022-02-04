@@ -119,10 +119,15 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px dashed rgb(96, 105, 236);
+    box-shadow: 5px 5px 15px #d9d9d9, -5px -5px 15px #ffffff;
     border-radius: 10px;
     height: 320px;
     position: relative;
+    transition: transform 300ms ease-in-out;
+}
+
+.image-upload-area:hover {
+    transform: translateY(-3px);
 }
 
 /* upload file area - file box label */
@@ -132,7 +137,7 @@ header {
     align-items: center;
     width: 100%;
     height: inherit;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 1.5;
 }
@@ -156,12 +161,6 @@ header {
     line-height: 1.5;
     color: rgb(165, 165, 165);
     text-align: center;
-}
-
-.image-upload-area:hover {
-    background-color: rgb(71, 79, 190);
-    border: 2px solid rgb(71, 79, 190);
-    color: #fff;
 }
 
 /* go to main dashboard button */
@@ -244,7 +243,7 @@ header {
         font-weight: 500;
         line-height: 1.5;
         height: 120px;
-        margin: 20px 10px;
+        margin: 0 10px 20px;
         border: 2px dashed rgb(96, 105, 236);
         border-radius: 10px;
         transition: transform 300ms ease-in-out;
@@ -261,7 +260,12 @@ header {
     /* About cotents frame */
     .content-area {
         width: 100%;
-        margin: 0 20px;
+        margin: 0 40px;
+    }
+
+    /* image upload area */
+    .image-upload-area {
+        height: 500px;
     }
 }
 
@@ -287,6 +291,26 @@ header {
     /* !!!MAIN!!! */
     /* About cotents frame */
     .content-area {
-        margin: 0 30px;
+        margin: 0 180px;
+    }
+
+    /* image upload area */
+    .image-upload-area {
+        height: 60vh;
+    }
+
+    /* upload file area - file box label */
+    .image-upload-area label {
+        font-size: 22px;
+    }
+
+    .image-upload-area .upload-name {
+        font-size: 16px;
+    }
+
+    /* next button */
+    #next-button {
+        margin-top: 50px;
+        font-size: 14px;
     }
 }
