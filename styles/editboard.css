@@ -1,0 +1,228 @@
+body {
+    width: 100%;
+    height: auto;
+    color: rgb(85, 85, 85);
+    background-color: #fff;
+}
+
+/* !!!HEADER!!! */
+/* About Main header frame */
+header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+    background-color: rgb(236, 236, 236);
+    position: relative;
+}
+
+/* About logo image */
+.logo-image {
+    width: 160px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.logo-image a {
+    display: block;
+    cursor: pointer;
+}
+
+.logo-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* !!!user information!!! */
+/* About user profile image */
+.user-info .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* About user info list */
+.user-info-selector {
+    background-color: #fff;
+    box-shadow: 5px 5px 15px #d9d9d9, -5px -5px 15px #ffffff;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: 1;
+}
+
+.user-info-selector li {
+    border-bottom: 1px solid rgb(236, 236, 236);
+}
+
+.user-info-selector li:last-child {
+    border-bottom: none;
+}
+
+#my-profile,
+#logout button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: rgb(85, 85, 85);
+}
+
+/* About mobile-menu-bar */
+.proj-bar-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.go-main-button {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* !!!NAV!!! */
+.proj-nav {
+    width: 100%;
+    height: 100vh;
+}
+
+.proj-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* About project title */
+.proj-title {
+    display: none;
+}
+
+.proj-folder {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.5;
+    border-bottom: 1px solid rgb(236, 236, 236);
+    padding: 25px 0 25px 20px;
+}
+
+/* !!!MAIN!!! */
+/* About main frame */
+.content-area {
+    margin: 10px;
+}
+
+/* user create project title */
+#create-proj-title {
+    display: block;
+    width: 240px;
+    padding: 10px 5px;
+    margin: 10px auto 0 auto;
+    border: 1px solid rgb(96, 105, 236);
+    border-radius: 5px;
+    transition: border 300ms ease-in-out;
+    text-align: center;
+    font-weight: 700;
+}
+
+#create-proj-title:focus {
+    border: 1px solid rgb(71, 79, 190);
+}
+
+/* images slide - image navgation */
+.image-nav {
+    width: 100%;
+    height: 70px;
+    margin-top: 10px;
+}
+
+/* property slide - property selector */
+.property-selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.property-selector li {
+    display: block;
+    width: 100%;
+    margin: 0 2px;
+    padding: 5px 0;
+    text-align: center;
+    color: rgb(54, 91, 109);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* guide area frame */
+.guide-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 30px;
+}
+
+.text-area,
+.tts-area {
+    width: 100%;
+}
+
+/* guid-area title font */
+.text-area #text-title,
+.tts-area #tts-title {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* guide-area textarea */
+.text-area #guide-text,
+.tts-area #guide-tts {
+    display: block;
+    margin: 10px auto 10px auto;
+    width: 100%;
+    border: 1px solid rgb(96, 105, 236);
+    border-radius: 5px;
+    resize: none;
+    outline: none;
+    transition: border 300ms ease-in-out;
+}
+
+.text-area #guide-text:focus,
+.tts-area #guide-tts:focus {
+    border: 1px solid rgb(71, 79, 190);
+}
+
+/* same checkbox */
+#same-checkbox {
+    display: flex;
+    justify-content: center;
+}
+
+/* same checkbox label */
+#same-checkbox label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* next image button */
+#next-image-button {
+    text-align: center;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: rgb(96, 105, 236);
+    cursor: pointer;
+}
