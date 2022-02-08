@@ -5,6 +5,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>LMS Admin - Edit Dash Board</title>
+        <script src="https://kit.fontawesome.com/c2252b4ab1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles/reset.css" />
     </head>
     <body>
         <header>
@@ -15,7 +17,6 @@
             <h1 class="logo-image">
                 <a href="./index.html"> <img src="./assets/images/biblic_logo.png" alt="로고" /></a>
             </h1>
-            <input type="text" placeholder="프로젝트 이름" />
             <div class="user-info">
                 <img src="./assets/images/user.jpeg" alt="유저 프로필 이미지" class="user-image" />
                 <ul class="user-info-selector selector">
@@ -40,6 +41,7 @@
             </nav>
 
             <main class="content-area">
+                <input type="text" placeholder="프로젝트 이름" id="create-proj-title" />
                 <div class="image-nav">
                     <!-- image list -->
                     <ul>
@@ -48,8 +50,13 @@
                 </div>
                 <div class="working-area">
                     <!-- main image - working -->
-                    <button type="button">영역 속성</button>
-                    <button type="button">다음 이미지</button>
+                    <ul class="property-selector">
+                        <li>색</li>
+                        <li>굵기</li>
+                        <li>채우기</li>
+                        <li>투명도</li>
+                        <li>전체 영역 지정</li>
+                    </ul>
                 </div>
                 <div class="guide-area">
                     <div class="text-area">
@@ -63,6 +70,7 @@
                         <label for="create-same-text">가이드용 텍스트와 동일 시 체크</label>
                     </div>
                 </div>
+                <button type="button">다음 이미지</button>
             </main>
         </div>
         <script src="./js/selectBox.js"></script>
