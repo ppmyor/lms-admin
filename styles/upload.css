@@ -165,11 +165,14 @@ header {
 
 /* go to main dashboard button */
 #next-button {
+    display: block;
+    text-align: center;
     margin-top: 20px;
     font-size: 13px;
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 1.5;
     color: #fff;
-    height: 40px;
+    padding: 10px 0;
     width: 100%;
     border-radius: 5px;
     background-color: rgb(96, 105, 236);

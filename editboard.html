@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>LMS Admin - Upload</title>
-        <script src="https://kit.fontawesome.com/c2252b4ab1.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="./styles/reset.css" />
-        <link rel="stylesheet" href="./styles/upload.css" />
+        <title>LMS Admin - Edit Dash Board</title>
     </head>
     <body>
         <header>
@@ -18,6 +15,7 @@
             <h1 class="logo-image">
                 <a href="./index.html"> <img src="./assets/images/biblic_logo.png" alt="로고" /></a>
             </h1>
+            <input type="text" placeholder="프로젝트 이름" />
             <div class="user-info">
                 <img src="./assets/images/user.jpeg" alt="유저 프로필 이미지" class="user-image" />
                 <ul class="user-info-selector selector">
@@ -26,6 +24,7 @@
                 </ul>
             </div>
         </header>
+
         <div class="main-dashboard">
             <nav class="proj-nav mobile-selector">
                 <div class="proj-list">
@@ -41,15 +40,31 @@
             </nav>
 
             <main class="content-area">
-                <div class="image-upload-area">
-                    <label for="upload-file"><i class="fas fa-plus-circle"></i>&nbsp; 이미지 올리기</label>
-                    <input type="file" id="upload-file" accept="image/*" multiple />
-                    <input class="upload-name" value="첨부파일" readonly />
+                <div class="image-nav">
+                    <!-- image list -->
+                    <ul>
+                        <div id="1-image"></div>
+                    </ul>
                 </div>
-                <a href="./editboard.html" id="next-button">다음</a>
+                <div class="working-area">
+                    <!-- main image - working -->
+                    <button type="button">영역 속성</button>
+                    <button type="button">다음 이미지</button>
+                </div>
+                <div class="guide-area">
+                    <div class="text-area">
+                        <h3 id="text-title">가이드용 텍스트</h3>
+                        <textarea name="guide" id="guide-text" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="tts-area">
+                        <h3 id="tts-title">음성용 텍스트</h3>
+                        <textarea name="guide" id="guide-tts" cols="30" rows="10"></textarea>
+                        <input type="checkbox" name="guide" value="create-same-text" id="create-same-text" />
+                        <label for="create-same-text">가이드용 텍스트와 동일 시 체크</label>
+                    </div>
+                </div>
             </main>
         </div>
         <script src="./js/selectBox.js"></script>
-        <script src="./js/uploadFile.js"></script>
     </body>
 </html>
