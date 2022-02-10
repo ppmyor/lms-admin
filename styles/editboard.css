@@ -221,6 +221,7 @@ header {
 #same-checkbox {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 /* same checkbox label */
@@ -402,5 +403,85 @@ header {
         margin-top: 15px;
         font-size: 15px;
         padding: 10px 0;
+    }
+}
+
+/* media query - laptops */
+@media screen and (min-width: 992px) {
+    /* !!!NAV!!! */
+    .proj-nav {
+        width: 250px;
+        margin: 0 30px;
+    }
+
+    /* About Project folder */
+    .proj-folder {
+        height: 160px;
+    }
+
+    /* !!!MAIN!!! */
+    /* user create project title */
+    #create-proj-title {
+        font-size: 16px;
+        width: 300px;
+    }
+
+    /* images slide - image navgation */
+    .image-nav {
+        height: 120px;
+    }
+
+    /* guide area frame */
+    .guide-area {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 10px 30px;
+    }
+
+    .text-area,
+    .tts-area {
+        margin: 0 20px;
+    }
+
+    /* guid-area title font */
+    .text-area #text-title,
+    .tts-area #tts-title {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    /* guide-area textarea */
+    .text-area #guide-text,
+    .tts-area #guide-tts {
+        font-size: 16px;
+    }
+
+    .tts-area {
+        position: relative;
+    }
+    /* same checkbox */
+    #same-checkbox {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* same checkbox label */
+    #same-checkbox label {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.5;
+    }
+
+    /* next image button */
+    #next-image-button {
+        display: block;
+        margin: 70px auto 0 auto;
+        width: 50%;
+        font-size: 15px;
+        padding: 12px 0;
     }
 }
