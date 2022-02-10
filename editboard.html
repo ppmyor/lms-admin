@@ -40,36 +40,37 @@
                     </ul>
                 </div>
             </nav>
-
+            <input type="text" placeholder="프로젝트 이름" id="create-proj-title" />
             <main class="content-area">
-                <input type="text" placeholder="프로젝트 이름" id="create-proj-title" />
                 <div class="image-nav">
                     <!-- image list -->
                     <ul>
                         <div id="1-image"></div>
                     </ul>
                 </div>
-                <ul class="property-selector">
-                    <li>색</li>
-                    <li>굵기</li>
-                    <li>채우기</li>
-                    <li>투명도</li>
-                    <li>전체 영역</li>
-                </ul>
                 <div class="working-area">
-                    <!-- main image - working -->
-                </div>
-                <div class="guide-area">
-                    <div class="text-area">
-                        <h3 id="text-title">가이드용 텍스트</h3>
-                        <textarea name="guide" id="guide-text" cols="30" rows="10"></textarea>
+                    <ul class="property-selector">
+                        <li>색</li>
+                        <li>굵기</li>
+                        <li>채우기</li>
+                        <li>투명도</li>
+                        <li>전체 영역</li>
+                    </ul>
+                    <div class="current-image-area">
+                        <!-- main image - working -->
                     </div>
-                    <div class="tts-area">
-                        <h3 id="tts-title">음성용 텍스트</h3>
-                        <textarea name="guide" id="guide-tts" cols="30" rows="10"></textarea>
-                        <div id="same-checkbox">
-                            <input type="checkbox" name="guide" value="create-same-text" id="create-same-text" />
-                            <label for="create-same-text">&nbsp; 가이드용 텍스트와 동일 시 체크</label>
+                    <div class="guide-area">
+                        <div class="text-area">
+                            <h3 id="text-title">가이드용 텍스트</h3>
+                            <textarea name="guide" id="guide-text" cols="30" rows="10"></textarea>
+                        </div>
+                        <div class="tts-area">
+                            <h3 id="tts-title">음성용 텍스트</h3>
+                            <textarea name="guide" id="guide-tts" cols="30" rows="10"></textarea>
+                            <div id="same-checkbox">
+                                <input type="checkbox" name="guide" value="create-same-text" id="create-same-text" />
+                                <label for="create-same-text">&nbsp; 가이드용 텍스트와 동일 시 체크</label>
+                            </div>
                         </div>
                     </div>
                 </div>

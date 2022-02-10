@@ -143,19 +143,37 @@ header {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    margin: 0 5px;
+    border-radius: 5px;
 }
 
 .property-selector li {
     display: block;
     width: 100%;
-    margin: 0 2px;
     padding: 5px 0;
+    background-color: rgb(71, 79, 190);
+    color: #fff;
+    background-color: rgb(236, 236, 236);
+    color: rgb(85, 85, 85);
     text-align: center;
-    color: rgb(54, 91, 109);
     font-size: 13px;
     font-weight: 500;
     cursor: pointer;
+    border: 1px solid #fff;
+}
+
+.property-selector li:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.property-selector li:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.property-selector li:hover {
+    background-color: rgb(71, 79, 190);
+    color: #fff;
 }
 
 /* guide area frame */
@@ -225,4 +243,164 @@ header {
     border-radius: 5px;
     background-color: rgb(96, 105, 236);
     cursor: pointer;
+}
+
+/* media query - Tablets */
+@media screen and (min-width: 768px) {
+    /* !!!HEADER!!! */
+    /* About Main header frame */
+    header {
+        height: 100px;
+        justify-content: space-between;
+        background-color: #fff;
+    }
+
+    /* About logo image */
+    .logo-image {
+        width: 200px;
+        height: 50px;
+        margin: 0;
+    }
+
+    /* !!!user information!!! */
+    /* About user profile image */
+    .user-info .user-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* About user info list */
+    .user-info-selector {
+        top: 100px;
+        right: 10px;
+    }
+
+    #my-profile,
+    #logout button {
+        padding: 10px 30px;
+        font-size: 16px;
+    }
+
+    /* !!!NAV & MAIN!!! */
+    .main-dashboard {
+        display: flex;
+        flex-direction: row;
+        margin: 30px 20px;
+    }
+
+    /* !!!NAV!!! */
+    .proj-nav {
+        width: 150px;
+        height: auto;
+        flex-shrink: 0;
+        text-align: center;
+    }
+
+    /* mobile style reset */
+    .proj-folder {
+        border: none;
+        padding: 0;
+    }
+
+    /* About Project folder */
+    .proj-folder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.5;
+        height: 90px;
+        margin: 0 10px 20px;
+        border: 2px dashed rgb(96, 105, 236);
+        border-radius: 10px;
+        transition: transform 300ms ease-in-out;
+    }
+
+    .proj-folder:hover {
+        transform: translateY(-3px);
+        background-color: rgb(71, 79, 190);
+        border: none;
+        color: #fff;
+    }
+
+    /* !!!MAIN!!! */
+    /* About cotents frame */
+    .content-area {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    /* user create project title */
+    #create-proj-title {
+        margin-top: 0;
+        border: none;
+        border-radius: 0;
+        border-bottom: 1px solid rgb(96, 105, 236);
+        position: absolute;
+        top: 30px;
+        left: 230px;
+    }
+
+    #create-proj-title:focus {
+        border: none;
+        border-bottom: 1px solid rgb(71, 79, 190);
+    }
+
+    /* About working area */
+    .working-area {
+        margin-top: 10px;
+    }
+
+    /* images slide - image navgation */
+    .image-nav {
+        width: 100%;
+        height: 70px;
+        margin-top: 0;
+    }
+
+    /* About main image - current image area */
+    .current-image-area {
+        width: 100%;
+        height: 700px;
+        flex-shrink: 0;
+    }
+
+    /* property slide - property selector */
+    .property-selector {
+        width: 100%;
+    }
+
+    .property-selector li {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+    /* guide area frame */
+    .guide-area {
+        margin: 30px 10px 0;
+    }
+
+    /* guid-area title font */
+    .text-area #text-title,
+    .tts-area #tts-title {
+        font-size: 18px;
+    }
+
+    /* same checkbox */
+    #same-checkbox {
+        margin-top: 20px;
+    }
+
+    /* same checkbox label */
+    #same-checkbox label {
+        font-size: 15px;
+    }
+
+    /* next image button */
+    #next-image-button {
+        margin-top: 15px;
+        font-size: 15px;
+        padding: 10px 0;
+    }
 }
