@@ -212,31 +212,31 @@ header {
     height: 100%;
 }
 
-#property-color-select span:first-child {
+#property-color-select .red {
     background-color: rgb(226, 111, 111);
 }
 
-#property-color-select span:nth-child(2) {
+#property-color-select .yellow {
     background-color: rgb(255, 255, 0);
 }
 
-#property-color-select span:nth-child(3) {
+#property-color-select .green {
     background-color: rgb(11, 139, 11);
 }
 
-#property-color-select span:nth-child(4) {
+#property-color-select .blue {
     background-color: rgb(67, 67, 255);
 }
 
-#property-color-select span:nth-child(5) {
+#property-color-select .purple {
     background-color: rgb(126, 51, 126);
 }
 
-#property-color-select span:nth-child(6) {
+#property-color-select .white {
     background-color: rgb(255, 255, 255);
 }
 
-#property-color-select span:last-child {
+#property-color-select .black {
     background-color: rgb(0, 0, 0);
 }
 

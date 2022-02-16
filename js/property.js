@@ -21,6 +21,8 @@ opacityProperty.addEventListener("click", function () {
     opacitySelect();
 });
 
+createColor();
+
 function colorSelect() {
     selectColorProperty.classList.toggle(TOGGLE_BUTTON_CLASSNAME);
     if (selectColorProperty.classList.contains(TOGGLE_BUTTON_CLASSNAME)) {
@@ -55,4 +57,31 @@ function opacitySelect() {
     } else {
         selectProperty.style.setProperty("display", "none");
     }
+}
+
+// create color picker
+function createColor() {
+    const red = document.createElement("span");
+    const yellow = document.createElement("span");
+    const green = document.createElement("span");
+    const blue = document.createElement("span");
+    const purple = document.createElement("span");
+    const white = document.createElement("span");
+    const black = document.createElement("span");
+
+    red.classList.add("red");
+    yellow.classList.add("yellow");
+    green.classList.add("green");
+    blue.classList.add("blue");
+    purple.classList.add("purple");
+    white.classList.add("white");
+    black.classList.add("black");
+
+    selectColorProperty.insertBefore(red, null);
+    selectColorProperty.insertBefore(yellow, null);
+    selectColorProperty.insertBefore(green, null);
+    selectColorProperty.insertBefore(blue, null);
+    selectColorProperty.insertBefore(purple, null);
+    selectColorProperty.insertBefore(white, null);
+    selectColorProperty.insertBefore(black, null);
 }
