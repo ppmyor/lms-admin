@@ -30,6 +30,12 @@ function colorSelect() {
         selectColorProperty.style.setProperty("display", "flex");
         selectThicknessProperty.style.setProperty("display", "none");
         selectOpacityProperty.style.setProperty("display", "none");
+        if (selectThicknessProperty.classList.contains(TOGGLE_BUTTON_CLASSNAME)) {
+            selectThicknessProperty.classList.remove(TOGGLE_BUTTON_CLASSNAME);
+        }
+        if (selectOpacityProperty.classList.contains(TOGGLE_BUTTON_CLASSNAME)) {
+            selectOpacityProperty.classList.remove(TOGGLE_BUTTON_CLASSNAME);
+        }
     } else {
         selectProperty.style.setProperty("display", "none");
     }
@@ -42,6 +48,12 @@ function thicknessSelect() {
         selectThicknessProperty.style.setProperty("display", "flex");
         selectColorProperty.style.setProperty("display", "none");
         selectOpacityProperty.style.setProperty("display", "none");
+        if (selectColorProperty.classList.contains(TOGGLE_BUTTON_CLASSNAME)) {
+            selectColorProperty.classList.remove(TOGGLE_BUTTON_CLASSNAME);
+        }
+        if (selectOpacityProperty.classList.contains(TOGGLE_BUTTON_CLASSNAME)) {
+            selectOpacityProperty.classList.remove(TOGGLE_BUTTON_CLASSNAME);
+        }
     } else {
         selectProperty.style.setProperty("display", "none");
     }
@@ -54,6 +66,12 @@ function opacitySelect() {
         selectOpacityProperty.style.setProperty("display", "flex");
         selectColorProperty.style.setProperty("display", "none");
         selectThicknessProperty.style.setProperty("display", "none");
+        if (selectColorProperty.classList.contains(TOGGLE_BUTTON_CLASSNAME)) {
+            selectColorProperty.classList.remove(TOGGLE_BUTTON_CLASSNAME);
+        }
+        if (selectThicknessProperty.classList.contains(TOGGLE_BUTTON_CLASSNAME)) {
+            selectThicknessProperty.classList.remove(TOGGLE_BUTTON_CLASSNAME);
+        }
     } else {
         selectProperty.style.setProperty("display", "none");
     }
