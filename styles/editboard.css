@@ -141,16 +141,27 @@ header {
 /* images slide - image navgation */
 .image-nav {
     width: 100%;
-    height: 70px;
-    overflow-y: scroll;
+    height: 120px;
+    overflow-x: auto;
     display: flex;
-    justify-content: center;
+    margin: 10px 0;
 }
 
 #image-list {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+
+#image-list .wait-image {
+    margin: 0 10px;
+    width: 60px;
+    height: auto;
+}
+
+.wait-image img {
+    width: 100%;
+    height: 100%;
 }
 
 /* property slide - property selector */
@@ -422,6 +433,8 @@ header {
     /* About cotents frame */
     .content-area {
         width: 100%;
+        margin-top: 0;
+        padding-right: 10px;
     }
 
     /* user create project title */
@@ -448,8 +461,13 @@ header {
     /* images slide - image navgation */
     .image-nav {
         width: 100%;
-        height: 70px;
-        margin-top: 0;
+        height: 180px;
+        margin: 0 0 15px;
+    }
+
+    #image-list .wait-image {
+        width: 90px;
+        margin: 0 15px;
     }
 
     /* About main image - current image area */
@@ -503,7 +521,7 @@ header {
     /* !!!NAV!!! */
     .proj-nav {
         width: 250px;
-        margin: 100px 30px 0;
+        margin: 0 30px 0;
     }
 
     /* About Project folder */
@@ -520,7 +538,12 @@ header {
 
     /* images slide - image navgation */
     .image-nav {
-        height: 120px;
+        width: 100%;
+        height: 200px;
+    }
+
+    #image-list .wait-image {
+        width: 90px;
     }
 
     /* guide area frame */
