@@ -13,6 +13,8 @@ let isDown = false;
 let data = [];
 let rateData = [];
 
+let drawCanvasTop = drawCanvas.getBoundingClientRect().top;
+
 // Mouse
 drawCanvas.addEventListener("mousedown", function (event) {
     handleMouseDown(event);
@@ -30,6 +32,11 @@ drawCanvas.addEventListener("mouseup", function (event) {
 
 drawCanvas.addEventListener("mouseout", function () {
     isDown = false;
+});
+
+// scroll event(touch 좌표 측정 시 canvas top 위치를 빼줘야함)
+window.addEventListener("scroll", function () {
+    drawCanvasTop = drawCanvas.getBoundingClientRect().top;
 });
 
 // Touch
@@ -73,10 +80,9 @@ function handleMouseUp(event) {
 // touch
 function handleTouchDown(event) {
     event.preventDefault();
-    startX = event.targetTouches[0].pageX;
-    startY = event.targetTouches[0].pageY;
+    startX = event.targetTouches[0].clientX;
+    startY = event.targetTouches[0].clientY;
     isDown = true;
-    console.log("touch down", startX, startY);
 }
 
 function handleTouchMove(event) {
@@ -84,17 +90,15 @@ function handleTouchMove(event) {
     if (!isDown) {
         return;
     }
-    let nowX = event.changedTouches[0].pageX;
-    let nowY = event.changedTouches[0].pageY;
-    console.log("touch move", nowX, nowY);
-    handleDraw(nowX, nowY);
+    let nowX = event.changedTouches[0].clientX;
+    let nowY = event.changedTouches[0].clientY;
+    handleTouchDraw(nowX, nowY);
 }
 
 function handleTouchUp(event) {
     event.preventDefault();
-    endX = event.changedTouches[0].pageX;
-    endY = event.changedTouches[0].pageY;
-    console.log("touch up", endX, endY);
+    endX = event.changedTouches[0].clientX;
+    endY = event.changedTouches[0].clientY;
 }
 
 function rateCalcurate(currentX, currentY) {
@@ -107,4 +111,9 @@ function rateCalcurate(currentX, currentY) {
 function handleDraw(currentX, currentY) {
     drawContext.clearRect(0, 0, drawContext.canvas.width, drawContext.canvas.height);
     drawContext.strokeRect(startX, startY, currentX - startX, currentY - startY);
+}
+
+function handleTouchDraw(currentX, currentY) {
+    drawContext.clearRect(0, 0, drawContext.canvas.width, drawContext.canvas.height);
+    drawContext.strokeRect(startX, startY - drawCanvasTop, currentX - startX, currentY - startY);
 }
