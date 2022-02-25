@@ -277,18 +277,31 @@ header {
 }
 
 .current-image-area {
+    /* 사용되는 image 크기에 따라 사이즈 조절 필요*/
+    margin: 0 auto;
     width: 100%;
-    height: 500px;
+    height: 550px;
+    position: relative;
+}
+
+#current-image {
+    display: block;
+    width: inherit;
+    height: inherit;
+    position: relative;
 }
 
 #draw-box {
     width: inherit;
     height: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 #draw-canvas {
-    width: inherit;
-    height: inherit;
+    width: 100%;
+    height: 100%;
 }
 
 /* guide area frame */
@@ -483,8 +496,8 @@ header {
 
     /* About main image - current image area */
     .current-image-area {
-        width: 100%;
-        height: 700px;
+        width: 80%;
+        height: 750px;
         flex-shrink: 0;
     }
 
@@ -552,6 +565,13 @@ header {
 
     #image-list .wait-image {
         width: 140px;
+    }
+
+    /* About main image - current image area */
+    .current-image-area {
+        width: 50%;
+        height: 700px;
+        flex-shrink: 0;
     }
 
     /* guide area frame */
