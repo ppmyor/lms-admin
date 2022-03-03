@@ -9,6 +9,9 @@ const selectColorProperty = document.querySelector("#property-color-select");
 const selectThicknessProperty = document.querySelector("#property-thickness-select");
 const selectOpacityProperty = document.querySelector("#property-opacity-select");
 
+let drawColor = "black";
+let drawLine = 2;
+
 colorProperty.addEventListener("click", function () {
     colorSelect();
 });
@@ -103,3 +106,39 @@ function createColor() {
     selectColorProperty.insertBefore(white, null);
     selectColorProperty.insertBefore(black, null);
 }
+
+// choose
+document.querySelector(".red").addEventListener("click", function () {
+    drawColor = "red";
+    drawContext.strokeStyle = drawColor;
+});
+
+document.querySelector(".yellow").addEventListener("click", function () {
+    drawColor = "yellow";
+    drawContext.strokeStyle = drawColor;
+});
+
+document.querySelector(".green").addEventListener("click", function () {
+    drawColor = "green";
+    drawContext.strokeStyle = drawColor;
+});
+
+document.querySelector(".blue").addEventListener("click", function () {
+    drawColor = "blue";
+    drawContext.strokeStyle = drawColor;
+});
+
+document.querySelector(".purple").addEventListener("click", function () {
+    drawColor = "purple";
+    drawContext.strokeStyle = drawColor;
+});
+
+document.querySelector(".white").addEventListener("click", function () {
+    drawColor = "#FFFFFF";
+    drawContext.strokeStyle = drawColor;
+});
+
+document.querySelector(".black").addEventListener("click", function () {
+    drawColor = "black";
+    drawContext.strokeStyle = drawColor;
+});
