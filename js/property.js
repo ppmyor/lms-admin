@@ -107,38 +107,37 @@ function createColor() {
     selectColorProperty.insertBefore(black, null);
 }
 
-// choose
+// choose color
 document.querySelector(".red").addEventListener("click", function () {
-    drawColor = "red";
-    drawContext.strokeStyle = drawColor;
+    chooseColor("rgb(226, 111, 111)");
 });
 
 document.querySelector(".yellow").addEventListener("click", function () {
-    drawColor = "yellow";
-    drawContext.strokeStyle = drawColor;
+    chooseColor("rgb(255, 255, 0)");
 });
 
 document.querySelector(".green").addEventListener("click", function () {
-    drawColor = "green";
-    drawContext.strokeStyle = drawColor;
+    chooseColor("rgb(11, 139, 11)");
 });
 
 document.querySelector(".blue").addEventListener("click", function () {
-    drawColor = "blue";
-    drawContext.strokeStyle = drawColor;
+    chooseColor("rgb(67, 67, 255)");
 });
 
 document.querySelector(".purple").addEventListener("click", function () {
-    drawColor = "purple";
-    drawContext.strokeStyle = drawColor;
+    chooseColor("rgb(126, 51, 126)");
 });
 
 document.querySelector(".white").addEventListener("click", function () {
-    drawColor = "#FFFFFF";
-    drawContext.strokeStyle = drawColor;
+    chooseColor("rgb(255, 255, 255)");
 });
 
 document.querySelector(".black").addEventListener("click", function () {
-    drawColor = "black";
-    drawContext.strokeStyle = drawColor;
+    chooseColor("rgb(0, 0, 0)");
 });
+
+// choose color
+function chooseColor(color) {
+    drawColor = color;
+    drawContext.strokeStyle = drawColor;
+}
