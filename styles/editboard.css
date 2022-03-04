@@ -289,6 +289,7 @@ header {
     width: inherit;
     height: inherit;
     position: relative;
+    margin: 0 auto;
 }
 
 #draw-box {
@@ -296,7 +297,8 @@ header {
     height: inherit;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #draw-canvas {
