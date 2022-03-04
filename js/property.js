@@ -2,6 +2,7 @@
 const colorProperty = document.querySelector("#property-color");
 const thicknessProperty = document.querySelector("#property-thickness");
 const opacityProperty = document.querySelector("#property-opacity");
+const fillProperty = document.querySelector("#property-fill");
 
 // select-property
 const selectProperty = document.querySelector(".select-property");
@@ -22,6 +23,16 @@ thicknessProperty.addEventListener("click", function () {
 
 opacityProperty.addEventListener("click", function () {
     opacitySelect();
+});
+
+fillProperty.addEventListener("click", function () {
+    if (isFill === false) {
+        isFill = true;
+        fillProperty.innerHTML = "비우기";
+    } else {
+        isFill = false;
+        fillProperty.innerHTML = "채우기";
+    }
 });
 
 createColor();
@@ -148,5 +159,5 @@ function thicknessChange() {
 
 // choose opacity
 function opacityChange() {
-    drawCanvas.globalAlpha = opacityValue.value;
+    drawContext.globalAlpha = opacityValue.value;
 }

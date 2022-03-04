@@ -12,6 +12,8 @@ drawContext.lineWidth = 2;
 drawContext.strokeStyle = "rgb(0, 0, 0)";
 drawCanvas.globalAlpha = 0.5;
 
+let isFill = false;
+
 let isDown = false;
 let data = [];
 let rateData = [];
@@ -113,10 +115,18 @@ function rateCalcurate(currentX, currentY) {
 
 function handleDraw(currentX, currentY) {
     drawContext.clearRect(0, 0, drawContext.canvas.width, drawContext.canvas.height);
-    drawContext.strokeRect(startX, startY, currentX - startX, currentY - startY);
+    if (isFill === false) {
+        drawContext.strokeRect(startX, startY, currentX - startX, currentY - startY);
+    } else {
+        drawContext.fillRect(startX, startY, currentX - startX, currentY - startY);
+    }
 }
 
 function handleTouchDraw(currentX, currentY) {
     drawContext.clearRect(0, 0, drawContext.canvas.width, drawContext.canvas.height);
-    drawContext.strokeRect(startX, startY - drawCanvasTop, currentX - startX, currentY - startY);
+    if (isFill === false) {
+        drawContext.strokeRect(startX, startY - drawCanvasTop, currentX - startX, currentY - startY);
+    } else {
+        drawContext.fillRect(startX, startY - drawCanvasTop, currentX - startX, currentY - startY);
+    }
 }
