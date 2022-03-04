@@ -9,8 +9,8 @@ const selectColorProperty = document.querySelector("#property-color-select");
 const selectThicknessProperty = document.querySelector("#property-thickness-select");
 const selectOpacityProperty = document.querySelector("#property-opacity-select");
 
-let drawColor = "black";
-let drawLine = 2;
+const opacityValue = document.querySelector("#opacity-range");
+const thicknessValue = document.querySelector("#thickness-range");
 
 colorProperty.addEventListener("click", function () {
     colorSelect();
@@ -138,6 +138,15 @@ document.querySelector(".black").addEventListener("click", function () {
 
 // choose color
 function chooseColor(color) {
-    drawColor = color;
-    drawContext.strokeStyle = drawColor;
+    drawContext.strokeStyle = color;
+}
+
+// choose thickness
+function thicknessChange() {
+    drawContext.lineWidth = thicknessValue.value;
+}
+
+// choose opacity
+function opacityChange() {
+    drawCanvas.globalAlpha = opacityValue.value;
 }

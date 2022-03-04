@@ -6,8 +6,11 @@ const drawWidth = drawGround.clientWidth;
 const drawHeight = drawGround.clientHeight;
 drawCanvas.width = drawWidth;
 drawCanvas.height = drawHeight;
+
+// context default value
 drawContext.lineWidth = 2;
-drawContext.strokeStyle = "#131313";
+drawContext.strokeStyle = "rgb(0, 0, 0)";
+drawCanvas.globalAlpha = 0.5;
 
 let isDown = false;
 let data = [];

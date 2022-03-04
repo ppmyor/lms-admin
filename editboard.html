@@ -113,10 +113,24 @@
                     <ul class="select-property selector">
                         <li id="property-color-select" class="selector"></li>
                         <li id="property-thickness-select" class="selector">
-                            <input type="range" min="0" max="5" id="thickness-range" />
+                            <input
+                                type="range"
+                                min="2"
+                                max="5"
+                                step="0.1"
+                                id="thickness-range"
+                                onchange="thicknessChange()"
+                            />
                         </li>
                         <li id="property-opacity-select" class="selector">
-                            <input type="range" min="0" max="100" id="opacity-range" />
+                            <input
+                                type="range"
+                                min="0"
+                                max="1"
+                                step="0.01"
+                                id="opacity-range"
+                                onchange="opacityChange()"
+                            />
                         </li>
                     </ul>
                     <div class="current-image-area">
