@@ -141,7 +141,7 @@ header {
 /* images slide - image navgation */
 .image-nav {
     width: 100%;
-    height: 120px;
+    height: 140px;
     overflow-x: auto;
     display: flex;
     margin: 10px 0;
@@ -157,6 +157,18 @@ header {
     margin: 0 10px;
     width: 60px;
     height: auto;
+    position: relative;
+}
+
+.wait-image .delete-button {
+    display: block;
+    background-color: rgb(216, 216, 216);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 
 .wait-image img {
@@ -222,6 +234,7 @@ header {
 #property-color-select span {
     width: 20px;
     height: 100%;
+    cursor: pointer;
 }
 
 #property-color-select .red {
@@ -487,7 +500,7 @@ header {
     /* images slide - image navgation */
     .image-nav {
         width: 100%;
-        height: 180px;
+        height: 200px;
         margin: 0 0 15px;
     }
 
@@ -562,7 +575,7 @@ header {
 
     /* images slide - image navgation */
     .image-nav {
-        height: 265px;
+        height: 285px;
     }
 
     #image-list .wait-image {
