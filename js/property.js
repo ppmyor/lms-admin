@@ -3,6 +3,7 @@ const colorProperty = document.querySelector("#property-color");
 const thicknessProperty = document.querySelector("#property-thickness");
 const opacityProperty = document.querySelector("#property-opacity");
 const fillProperty = document.querySelector("#property-fill");
+const wholeAreaProperty = document.querySelector("#property-whole-area");
 
 // select-property
 const selectProperty = document.querySelector(".select-property");
@@ -33,6 +34,10 @@ fillProperty.addEventListener("click", function () {
         isFill = false;
         fillProperty.innerHTML = "채우기";
     }
+});
+
+wholeAreaProperty.addEventListener("click", function () {
+    wholeAreaSelect();
 });
 
 createColor();
@@ -160,4 +165,14 @@ function thicknessChange() {
 // choose opacity
 function opacityChange() {
     drawContext.globalAlpha = opacityValue.value;
+}
+
+// choose whole area
+function wholeAreaSelect() {
+    drawContext.clearRect(0, 0, drawContext.canvas.width, drawContext.canvas.height);
+    if (isFill === false) {
+        drawContext.strokeRect(0, 0, drawContext.canvas.width, drawContext.canvas.height);
+    } else {
+        drawContext.fillRect(0, 0, drawContext.canvas.width, drawContext.canvas.height);
+    }
 }
