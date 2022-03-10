@@ -85,7 +85,7 @@ function handleMouseUp(event) {
 // touch
 function handleTouchDown(event) {
     event.preventDefault();
-    startX = event.targetTouches[0].clientX;
+    startX = event.targetTouches[0].clientX - drawCanvas.getBoundingClientRect().left;
     startY = event.targetTouches[0].clientY;
     isDown = true;
 }
@@ -95,14 +95,14 @@ function handleTouchMove(event) {
     if (!isDown) {
         return;
     }
-    let nowX = event.changedTouches[0].clientX;
+    let nowX = event.changedTouches[0].clientX - drawCanvas.getBoundingClientRect().left;
     let nowY = event.changedTouches[0].clientY;
     handleTouchDraw(nowX, nowY);
 }
 
 function handleTouchUp(event) {
     event.preventDefault();
-    endX = event.changedTouches[0].clientX;
+    endX = event.changedTouches[0].clientX - drawCanvas.getBoundingClientRect().left;
     endY = event.changedTouches[0].clientY;
 }
 
