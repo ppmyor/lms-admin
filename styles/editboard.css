@@ -19,6 +19,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 /* About logo image */
@@ -397,6 +398,7 @@ header {
         height: 100px;
         justify-content: space-between;
         background-color: #fff;
+        z-index: 1;
     }
 
     /* About logo image */
@@ -485,6 +487,7 @@ header {
         position: fixed;
         top: 30px;
         left: 230px;
+        z-index: 2;
     }
 
     #create-proj-title:focus {
