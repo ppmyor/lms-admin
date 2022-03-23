@@ -106,11 +106,16 @@ function handleTouchUp(event) {
     endY = event.changedTouches[0].clientY;
 }
 
+// 상대 좌표 계산
 function rateCalcurate(currentX, currentY) {
     startRateX = startX / drawWidth;
     startRateY = startY / drawHeight;
     currentRateX = currentX / drawWidth;
     currentRateY = currentY / drawHeight;
+    drawStartRateX = startRateX * drawWidth;
+    drawStartRateY = startRateY * drawHeight;
+    drawCurrentRateX = currentRateX * drawWidth;
+    drawCurrentRateY = currentRateY * drawHeight;
 }
 
 function handleDraw(currentX, currentY) {
