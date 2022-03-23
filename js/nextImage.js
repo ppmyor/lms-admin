@@ -3,14 +3,15 @@ const currentImageArea = document.querySelector(".current-image-area");
 const currentImage = document.querySelector(".current-image");
 const waitImages = document.querySelectorAll(".wait-image");
 
-ASSETS_URL = "../assets/images/sample_image/";
 let pageNum = 1;
+const fileFormat = currentImage.src.includes("jpg") ? "jpg" : "jpeg";
 
 nextImageBtn.addEventListener("click", function (event) {
     event.preventDefault();
     if (pageNum > waitImages.length) {
         return;
     }
+
     document.querySelector(".current-image").remove();
     pageNum += 1;
     const newImage = document.createElement("img");
@@ -32,6 +33,8 @@ for (const image of waitImages) {
         newImage.alt = "#";
         newImage.classList.add("current-image");
         currentImageArea.append(newImage);
-        pageNum = parseInt(clickedImageSrc.slice(-5, -4));
+
+        pageNum =
+            fileFormat === "jpg" ? parseInt(clickedImageSrc.slice(-5, -4)) : parseInt(clickedImageSrc.slice(-6, -5));
     });
 }
