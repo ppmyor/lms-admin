@@ -298,7 +298,7 @@ header {
     position: relative;
 }
 
-#current-image {
+.current-image {
     display: block;
     width: inherit;
     height: inherit;

@@ -145,31 +145,39 @@
                         </li>
                     </ul>
                     <div class="current-image-area">
-                        <img src="./assets/images/sample_image/1.jpg" alt="#" id="current-image" />
+                        <img src="./assets/images/sample_image/1.jpg" alt="#" class="current-image" />
                         <div id="draw-box">
                             <canvas id="draw-canvas"></canvas>
                         </div>
                     </div>
-                    <div class="guide-area">
-                        <div class="text-area">
-                            <h3 id="text-title">가이드용 텍스트</h3>
-                            <textarea name="guide" id="guide-text" cols="30" rows="10"></textarea>
-                        </div>
-                        <div class="tts-area">
-                            <h3 id="tts-title">음성용 텍스트</h3>
-                            <textarea name="guide" id="guide-tts" cols="30" rows="10"></textarea>
-                            <div id="same-checkbox">
-                                <input type="checkbox" name="guide" value="create-same-text" id="create-same-text" />
-                                <label for="create-same-text">&nbsp; 가이드용 텍스트와 동일 시 체크</label>
+                    <form action="#">
+                        <div class="guide-area">
+                            <div class="text-area">
+                                <h3 id="text-title">가이드용 텍스트</h3>
+                                <textarea name="guide" id="guide-text" cols="30" rows="10"></textarea>
+                            </div>
+                            <div class="tts-area">
+                                <h3 id="tts-title">음성용 텍스트</h3>
+                                <textarea name="guide" id="guide-tts" cols="30" rows="10"></textarea>
+                                <div id="same-checkbox">
+                                    <input
+                                        type="checkbox"
+                                        name="guide"
+                                        value="create-same-text"
+                                        id="create-same-text"
+                                    />
+                                    <label for="create-same-text">&nbsp; 가이드용 텍스트와 동일 시 체크</label>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        <button type="submit" id="next-image-button">다음 이미지</button>
+                    </form>
                 </div>
-                <button type="button" id="next-image-button">다음 이미지</button>
             </main>
         </div>
         <script src="./js/selectBox.js"></script>
         <script src="./js/property.js"></script>
         <script src="./js/drawCanvas.js"></script>
+        <script src="./js/nextImage.js"></script>
     </body>
 </html>
