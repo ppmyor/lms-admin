@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LMS Admin - Main Board</title>
+        <script src="https://kit.fontawesome.com/c2252b4ab1.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./styles/reset.css" />
+        <link rel="stylesheet" href="./styles/mainboard.css" />
+    </head>
+    <body>
+        <header>
+            <div class="mobile-menu mobile-icon">
+                <i class="fas fa-bars proj-bar-button"></i>
+                <i class="fas fa-chevron-left go-main-button toggle-button"></i>
+            </div>
+            <h1 class="logo-image">
+                <a href="./index.html"> <img src="./assets/images/biblic_logo.png" alt="로고" /></a>
+            </h1>
+            <div class="user-info">
+                <img src="./assets/images/user.jpeg" alt="유저 프로필 이미지" class="user-image" />
+                <ul class="user-info-selector selector">
+                    <li id="my-profile"><a href="#">내 프로필</a></li>
+                    <li id="logout"><button type="button">로그아웃</button></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="main-dashboard">
+            <nav class="proj-nav mobile-selector">
+                <div class="proj-list">
+                    <h1 class="proj-title">프로젝트 목록</h1>
+                    <ul>
+                        <li id="1-proj-folder">
+                            <a href="#">
+                                <div class="proj-folder">내 프로젝트</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <h1 id="proj-title">default proj.</h1>
+            <main class="content-area">
+                <div class="working-area">
+                    <div class="current-image-area">
+                        <img src="./assets/images/sample_image/1.jpg" alt="#" class="current-image" />
+                        <div id="draw-box">
+                            <canvas id="draw-canvas"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="controller">
+                    <table>
+                        <tr>
+                            <td colspan="2">
+                                <button type="button" id="hint-button">힌트</button>
+                            </td>
+                            <td colspan="1">
+                                <button type="button" id="fullscreen-button">전체화면</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <h3>진행단계별로 따라가보세요.</h3>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <div id="content-description-area"></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">
+                                <button type="button">이전</button>
+                            </td>
+                            <td colspan="1">
+                                <button type="button">처음단계</button>
+                            </td>
+                            <td colspan="1">
+                                <button type="button">다음</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">
+                                <button type="button">작게</button>
+                            </td>
+                            <td colspan="1">
+                                <button type="button">중간</button>
+                            </td>
+                            <td colspan="1">
+                                <button type="button">크게</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <button type="button">일시정지</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="1">
+                                <button type="button">느리게</button>
+                            </td>
+                            <td colspan="1">
+                                <button type="button">중간</button>
+                            </td>
+                            <td colspan="1">
+                                <button type="button">빠르게</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </main>
+        </div>
+        <script src="./js/selectBox.js"></script>
+    </body>
+</html>
