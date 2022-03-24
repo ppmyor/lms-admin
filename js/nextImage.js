@@ -5,7 +5,7 @@ const waitImages = document.querySelectorAll(".wait-image");
 
 let pageNum = 1;
 const fileFormat = currentImage.src.includes("jpg") ? "jpg" : "jpeg";
-
+const FILE_URL = "./assets/images/sample_image/";
 nextImageBtn.addEventListener("click", function (event) {
     event.preventDefault();
     if (pageNum > waitImages.length) {
@@ -15,7 +15,7 @@ nextImageBtn.addEventListener("click", function (event) {
     document.querySelector(".current-image").remove();
     pageNum += 1;
     const newImage = document.createElement("img");
-    newImage.src = `./assets/images/sample_image/${pageNum}.jpg`;
+    newImage.src = `${FILE_URL}${pageNum}.jpg`;
     newImage.alt = "#";
     newImage.classList.add("current-image");
     currentImageArea.append(newImage);
