@@ -431,7 +431,7 @@ header {
     .main-dashboard {
         display: flex;
         flex-direction: row;
-        margin: 100px 20px 30px 20px;
+        margin: 110px 20px 30px 20px;
     }
 
     /* !!!NAV!!! */
