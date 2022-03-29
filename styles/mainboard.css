@@ -141,6 +141,11 @@ header {
     position: relative;
 }
 
+#working-space {
+    display: none;
+    overflow: auto;
+}
+
 .current-image {
     display: block;
     width: inherit;
@@ -312,6 +317,7 @@ header {
 
     .controller button {
         font-size: 15px;
+        cursor: pointer;
     }
 
     .controller td {

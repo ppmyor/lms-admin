@@ -45,6 +45,11 @@
                 <main>
                     <div class="working-area">
                         <div class="current-image-area">
+                            <iframe
+                                src="./assets/images/sample_image/1.jpg"
+                                frameborder="0"
+                                id="working-space"
+                            ></iframe>
                             <img src="./assets/images/sample_image/1.jpg" alt="#" class="current-image" />
                             <div id="draw-box">
                                 <canvas id="draw-canvas"></canvas>
@@ -78,55 +83,55 @@
                             </tr>
                             <tr>
                                 <td colspan="1">
-                                    <button type="button">이전</button>
+                                    <button type="button" class="page-previous">이전</button>
                                 </td>
                                 <td colspan="1">
-                                    <button type="button">처음단계</button>
+                                    <button type="button" class="page-home">처음</button>
                                 </td>
                                 <td colspan="1">
-                                    <button type="button">다음</button>
+                                    <button type="button" class="page-next">다음</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="1">
-                                    <button type="button">작게</button>
+                                    <button type="button" class="font-small">작게</button>
                                 </td>
                                 <td colspan="1">
-                                    <button type="button">중간</button>
+                                    <button type="button" class="font-medium">중간</button>
                                 </td>
                                 <td colspan="1">
-                                    <button type="button">크게</button>
+                                    <button type="button" class="font-large">크게</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="3">
-                                    <button type="button">일시정지</button>
+                                    <button type="button" class="pause-button">일시정지</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="1">
-                                    <button type="button">느리게</button>
+                                    <button type="button" class="speed-slow">느리게</button>
                                 </td>
                                 <td colspan="1">
-                                    <button type="button">중간</button>
+                                    <button type="button" class="speed-medium">중간</button>
                                 </td>
                                 <td colspan="1">
-                                    <button type="button">빠르게</button>
+                                    <button type="button" class="speed-fast">빠르게</button>
                                 </td>
                             </tr>
                         </table>
                         <ul class="mobile-controller">
-                            <li class="mobile-go-home mobile-icon">
+                            <li class="mobile-page-home mobile-icon">
                                 <span class="mobile-icon">
                                     <i class="fas fa-home"></i>
                                 </span>
                             </li>
-                            <li class="mobile-previous mobile-icon">
+                            <li class="mobile-page-previous mobile-icon">
                                 <span class="mobile-icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                             </li>
-                            <li class="mobile-next mobile-icon">
+                            <li class="mobile-page-next mobile-icon">
                                 <span class="mobile-icon">
                                     <i class="fas fa-chevron-right"></i>
                                 </span>
@@ -143,7 +148,7 @@
                 </main>
             </div>
         </div>
-
+        <script src="./js/mainboard.js"></script>
         <script src="./js/selectBox.js"></script>
     </body>
 </html>
