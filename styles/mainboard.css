@@ -338,6 +338,7 @@ header {
         height: 300px;
         font-size: 18px;
         overflow: auto;
+        text-align: left;
     }
 
     .mobile-hidden {
