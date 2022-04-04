@@ -335,6 +335,7 @@ header {
     }
 
     .controller #content-description-area {
+        width: 100%;
         height: 300px;
         font-size: 18px;
         overflow: auto;

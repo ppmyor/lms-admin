@@ -29,7 +29,7 @@ const fontMediumButton = document.querySelector(".font-medium");
 const fontLargetButton = document.querySelector(".font-large");
 
 // play-pause
-const puaseButton = document.querySelector(".pause-button");
+const audioButton = document.querySelector(".audio-button");
 
 // play speed
 const speedSlowButton = document.querySelector(".speed-slow");
@@ -53,9 +53,10 @@ const coordinateArray = [];
 let imageWidth;
 let imageHeight;
 
-let pageVariable = 1;
+let pageVariable = 0;
 
-// Mobile
+// !!Mobile!!
+// page
 // move home page
 mobilePageHomeButton.addEventListener("click", function () {
     goToIndex();
@@ -71,7 +72,8 @@ mobilePageNextButton.addEventListener("click", function () {
     goToNext();
 });
 
-// Tablets, laptops
+// !!Tablets, laptops!!
+// page
 // move home page
 pageHomeButton.addEventListener("click", function () {
     goToIndex();
@@ -79,40 +81,40 @@ pageHomeButton.addEventListener("click", function () {
 
 // move previous page
 pagePreviousButton.addEventListener("click", function () {
-    goToPrevious();
+    pageVariable--;
+    goToPrevious(pageVariable);
 });
 
 // move next page
 pageNextButton.addEventListener("click", function () {
-    goToNext();
+    pageVariable++;
+    goToNext(pageVariable);
 });
 
 // page related function
 const goToIndex = () => {
-    pageVariable = 1;
+    pageVariable = 0;
     loadBackgroundImage(pageVariable);
     showDescriptionText(pageVariable);
     console.log(pageVariable);
 };
 
-const goToPrevious = () => {
-    if (pageVariable <= 1) {
+const goToPrevious = (pageNumber) => {
+    if (pageNumber < 0) {
         return;
     } else {
-        pageVariable--;
-        loadBackgroundImage(pageVariable);
-        showDescriptionText(pageVariable);
+        loadBackgroundImage(pageNumber);
+        showDescriptionText(pageNumber);
     }
     console.log(pageVariable);
 };
 
-const goToNext = () => {
-    if (pageVariable === contentImage.length - 1) {
+const goToNext = (pageNumber) => {
+    if (pageNumber === contentImage.length - 1) {
         return;
     } else {
-        pageVariable++;
-        loadBackgroundImage(pageVariable);
-        showDescriptionText(pageVariable);
+        loadBackgroundImage(pageNumber);
+        showDescriptionText(pageNumber);
     }
     console.log(pageVariable);
 };
@@ -124,9 +126,8 @@ const loadBackgroundImage = (pageNumber) => {
     }
     const backgroundImage = document.createElement("img");
     backgroundImage.className = "current-image";
-    if (pageNumber > 0) {
-        backgroundImage.src = contentImage[pageNumber - 1];
-    }
+    pageNumber > 0 ? (backgroundImage.src = contentImage[pageNumber - 1]) : (backgroundImage.src = contentImage[0]);
+
     currentImageArea.appendChild(backgroundImage);
 };
 
