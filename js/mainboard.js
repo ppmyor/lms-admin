@@ -76,24 +76,27 @@ mobilePageNextButton.addEventListener("click", function () {
 // page
 // move home page
 pageHomeButton.addEventListener("click", function () {
+    loadIndexAudio(pageVariable);
+    pageVariable = 0;
     goToIndex();
 });
 
 // move previous page
 pagePreviousButton.addEventListener("click", function () {
     pageVariable--;
+    pageVariable >= 1 ? loadPreviousAudio(pageVariable) : null;
     goToPrevious(pageVariable);
 });
 
 // move next page
 pageNextButton.addEventListener("click", function () {
+    loadNextAudio(pageVariable);
     pageVariable++;
     goToNext(pageVariable);
 });
 
 // page related function
 const goToIndex = () => {
-    pageVariable = 0;
     loadBackgroundImage(pageVariable);
     showDescriptionText(pageVariable);
     console.log(pageVariable);
@@ -110,13 +113,30 @@ const goToPrevious = (pageNumber) => {
 };
 
 const goToNext = (pageNumber) => {
-    if (pageNumber === contentImage.length - 1) {
+    if (pageNumber === contentImage.length + 1) {
         return;
     } else {
         loadBackgroundImage(pageNumber);
         showDescriptionText(pageNumber);
     }
     console.log(pageVariable);
+};
+
+// load Audio
+const loadIndexAudio = (pageNumber) => {
+    audioArray[pageNumber - 1].pause();
+};
+
+const loadNextAudio = (pageNumber) => {
+    audioArray[pageNumber].load();
+    audioArray[pageNumber].play();
+    pageNumber === 0 ? null : audioArray[pageNumber - 1].pause();
+};
+
+const loadPreviousAudio = (pageNumber) => {
+    audioArray[pageNumber - 1].load();
+    audioArray[pageNumber - 1].play();
+    pageNumber === contentImage.length ? null : audioArray[pageNumber].pause();
 };
 
 // handle background image
@@ -126,7 +146,9 @@ const loadBackgroundImage = (pageNumber) => {
     }
     const backgroundImage = document.createElement("img");
     backgroundImage.className = "current-image";
-    pageNumber > 0 ? (backgroundImage.src = contentImage[pageNumber - 1]) : (backgroundImage.src = contentImage[0]);
+    pageNumber > 0
+        ? (backgroundImage.src = contentImage[pageNumber - 1])
+        : (backgroundImage.src = "./assets/SD12/image/0.jpg");
 
     currentImageArea.appendChild(backgroundImage);
 };
