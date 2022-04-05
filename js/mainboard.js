@@ -111,15 +111,6 @@ pageNextButton.addEventListener("click", function () {
     goToNext(pageVariable);
 });
 
-// play-pause button
-playButton.addEventListener("click", function () {
-    audioArray[pageVariable - 1].play();
-});
-
-pauseButton.addEventListener("click", function () {
-    audioArray[pageVariable - 1].pause();
-});
-
 // page related function
 const goToIndex = () => {
     loadBackgroundImage(pageVariable);
@@ -184,6 +175,31 @@ const showDescriptionText = (pageNumber) => {
         contentDescription.innerText = pageDescArray[pageNumber - 1];
     }
 };
+
+// play-pause button
+playButton.addEventListener("click", function () {
+    audioArray[pageVariable - 1].play();
+});
+
+pauseButton.addEventListener("click", function () {
+    audioArray[pageVariable - 1].pause();
+});
+
+// audio speed control
+speedSlowButton.addEventListener("click", function () {
+    currentSpeed = 0.7;
+    audioArray[pageVariable - 1].playbackRate = currentSpeed;
+});
+
+speedMediumButton.addEventListener("click", function () {
+    currentSpeed = 1;
+    audioArray[pageVariable - 1].playbackRate = currentSpeed;
+});
+
+speedFastButton.addEventListener("click", function () {
+    currentSpeed = 1.3;
+    audioArray[pageVariable - 1].playbackRate = currentSpeed;
+});
 
 // full screen event
 fullScreenButton.addEventListener("click", function () {
