@@ -29,7 +29,8 @@ const fontMediumButton = document.querySelector(".font-medium");
 const fontLargetButton = document.querySelector(".font-large");
 
 // play-pause
-const audioButton = document.querySelector(".audio-button");
+const playButton = document.querySelector(".play-button");
+const pauseButton = document.querySelector(".pause-button");
 
 // play speed
 const speedSlowButton = document.querySelector(".speed-slow");
@@ -59,17 +60,23 @@ let pageVariable = 0;
 // page
 // move home page
 mobilePageHomeButton.addEventListener("click", function () {
+    loadIndexAudio(pageVariable);
+    pageVariable = 0;
     goToIndex();
 });
 
 // move previous page
 mobilePagePreviousButton.addEventListener("click", function () {
-    goToPrevious();
+    pageVariable--;
+    pageVariable >= 1 ? loadPreviousAudio(pageVariable) : null;
+    goToPrevious(pageVariable);
 });
 
 // move next page
 mobilePageNextButton.addEventListener("click", function () {
-    goToNext();
+    loadNextAudio(pageVariable);
+    pageVariable++;
+    goToNext(pageVariable);
 });
 
 // !!Tablets, laptops!!
