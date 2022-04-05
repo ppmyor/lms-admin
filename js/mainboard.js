@@ -79,6 +79,15 @@ mobilePageNextButton.addEventListener("click", function () {
     goToNext(pageVariable);
 });
 
+// play-pause button
+mobilePlayButton.addEventListener("click", function () {
+    audioArray[pageVariable - 1].play();
+});
+
+mobilePauseButton.addEventListener("click", function () {
+    audioArray[pageVariable - 1].pause();
+});
+
 // !!Tablets, laptops!!
 // page
 // move home page
@@ -100,6 +109,15 @@ pageNextButton.addEventListener("click", function () {
     loadNextAudio(pageVariable);
     pageVariable++;
     goToNext(pageVariable);
+});
+
+// play-pause button
+playButton.addEventListener("click", function () {
+    audioArray[pageVariable - 1].play();
+});
+
+pauseButton.addEventListener("click", function () {
+    audioArray[pageVariable - 1].pause();
 });
 
 // page related function
