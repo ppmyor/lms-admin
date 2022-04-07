@@ -263,8 +263,23 @@ const drawClickButton = (currentX, currentY, currentWidth, currentHeight) => {
     correctClickButton.style.top = currentY + "px";
     correctClickButton.style.width = currentWidth + "px";
     correctClickButton.style.height = currentHeight + "px";
-    correctClickButton.style.backgroundColor = "rgb(0,0,0)";
+    correctClickButton.style.backgroundColor = "transparent";
     currentImageArea.append(correctClickButton);
+};
+
+// handle hint button
+// !!Mobile!!
+mobileHintButton.addEventListener("click", function () {
+    handleHintButton();
+});
+
+// !!Tablets, laptops!!
+hintButton.addEventListener("click", function () {
+    handleHintButton();
+});
+
+const handleHintButton = () => {
+    correctClickButton.style.backgroundColor = "rgba(255, 0, 0, 0.5)";
 };
 
 // full screen event
