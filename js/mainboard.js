@@ -56,13 +56,20 @@ let imageHeight;
 
 let pageVariable = 0;
 
+// image의 width, height 할당
+window.addEventListener("load", function () {
+    imageWidth = document.querySelector(".current-image").clientWidth;
+    imageHeight = document.querySelector(".current-image").clientHeight;
+    setTimeout(scrollTo, 0, 0, 1);
+});
+
 // !!Mobile!!
 // page
 // move home page
 mobilePageHomeButton.addEventListener("click", function () {
     loadIndexAudio(pageVariable);
     pageVariable = 0;
-    goToIndex();
+    goToIndex(pageVariable);
 });
 
 // move previous page
@@ -112,9 +119,9 @@ pageNextButton.addEventListener("click", function () {
 });
 
 // page related function
-const goToIndex = () => {
-    loadBackgroundImage(pageVariable);
-    showDescriptionText(pageVariable);
+const goToIndex = (pageNumber) => {
+    loadBackgroundImage(pageNumber);
+    showDescriptionText(pageNumber);
     console.log(pageVariable);
 };
 
@@ -124,6 +131,7 @@ const goToPrevious = (pageNumber) => {
     } else {
         loadBackgroundImage(pageNumber);
         showDescriptionText(pageNumber);
+        buttonPositionCalcurate(coordinateArray[pageNumber - 1]);
     }
     console.log(pageVariable);
 };
@@ -134,6 +142,7 @@ const goToNext = (pageNumber) => {
     } else {
         loadBackgroundImage(pageNumber);
         showDescriptionText(pageNumber);
+        buttonPositionCalcurate(coordinateArray[pageNumber - 1]);
     }
     console.log(pageVariable);
 };
@@ -200,6 +209,63 @@ speedFastButton.addEventListener("click", function () {
     currentSpeed = 1.3;
     audioArray[pageVariable - 1].playbackRate = currentSpeed;
 });
+
+// handle correct click button
+const correctClickButton = document.createElement("div");
+correctClickButton.className = "correct-click-button";
+
+correctClickButton.addEventListener("click", function () {
+    handleClickButton();
+});
+
+const handleClickButton = () => {
+    loadNextAudio(pageVariable);
+    pageVariable++;
+    goToNext(pageVariable);
+};
+
+// create correct click button
+// click button position calcurate
+const buttonPositionCalcurate = (coordinate) => {
+    let nowX;
+    let nowY;
+    let nowWidth;
+    let nowHeight;
+
+    if (coordinate.startRateX < coordinate.endRateX && coordinate.startRateY < coordinate.endRateY) {
+        nowX = coordinate.startRateX * imageWidth;
+        nowY = coordinate.startRateY * imageHeight;
+        nowWidth = coordinate.endRateX * imageWidth - nowX;
+        nowHeight = coordinate.endRateY * imageHeight - nowY;
+    } else if (coordinate.startRateX > coordinate.endRateX && coordinate.startRateY < coordinate.endRateY) {
+        nowX = coordinate.endRateX * imageWidth;
+        nowY = coordinate.startRateY * imageHeight;
+        nowWidth = coordinate.startRateX * imageWidth - nowX;
+        nowHeight = coordinate.endRateY * imageHeight - nowY;
+    } else if (coordinate.startRateX > coordinate.endRateX && coordinate.startRateY > coordinate.endRateY) {
+        nowX = coordinate.endRateX * imageWidth;
+        nowY = coordinate.endRateY * imageHeight;
+        nowWidth = coordinate.startRateX * imageWidth - nowX;
+        nowHeight = coordinate.startRateY * imageHeight - nowY;
+    } else {
+        nowX = coordinate.startRateX * imageWidth;
+        nowY = coordinate.endRateY * imageHeight;
+        nowWidth = coordinate.endRateX * imageWidth - nowX;
+        nowHeight = coordinate.startRateY * imageHeight - nowY;
+    }
+    drawClickButton(nowX, nowY, nowWidth, nowHeight);
+};
+
+// click button style
+const drawClickButton = (currentX, currentY, currentWidth, currentHeight) => {
+    correctClickButton.style.position = "absolute";
+    correctClickButton.style.left = currentX + "px";
+    correctClickButton.style.top = currentY + "px";
+    correctClickButton.style.width = currentWidth + "px";
+    correctClickButton.style.height = currentHeight + "px";
+    correctClickButton.style.backgroundColor = "rgb(0,0,0)";
+    currentImageArea.append(correctClickButton);
+};
 
 // full screen event
 fullScreenButton.addEventListener("click", function () {
