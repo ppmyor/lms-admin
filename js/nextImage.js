@@ -4,8 +4,9 @@ const currentImage = document.querySelector(".current-image");
 const waitImages = document.querySelectorAll(".wait-image");
 
 let pageNum = 1;
+const pageName = "SD12";
 const fileFormat = currentImage.src.includes("jpg") ? "jpg" : "jpeg";
-const FILE_URL = "./assets/images/sample_image/";
+const FILE_URL = `../assets/${pageName}/image/`;
 nextImageBtn.addEventListener("click", function (event) {
     event.preventDefault();
     if (pageNum > waitImages.length) {
