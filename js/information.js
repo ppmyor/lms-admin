@@ -3,8 +3,8 @@ const pageNum = 19;
 const pageName = "SD12";
 
 for (i = 1; i <= pageNum; i++) {
-    contentImage.push(`../assets/${pageName}/image/${i}.jpg`);
-    audio = new Audio(`../assets/${pageName}/audio/${i}.mp3`);
+    contentImage.push(`assets/${pageName}/image/${i}.jpg`);
+    audio = new Audio(`assets/${pageName}/audio/${i}.mp3`);
     audioArray.push(audio);
 }
 
