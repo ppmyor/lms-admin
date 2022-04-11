@@ -330,13 +330,13 @@ header {
 }
 
 .text-area,
-.tts-area {
+.input-area {
     width: 100%;
 }
 
 /* guid-area title font */
 .text-area #text-title,
-.tts-area #tts-title {
+.input-area #inputbox-title {
     font-size: 13px;
     font-weight: 500;
     line-height: 1.5;
@@ -345,7 +345,7 @@ header {
 
 /* guide-area textarea */
 .text-area #guide-text,
-.tts-area #guide-tts {
+.input-area #guide-input {
     display: block;
     margin: 10px auto 10px auto;
     width: 100%;
@@ -357,19 +357,19 @@ header {
 }
 
 .text-area #guide-text:focus,
-.tts-area #guide-tts:focus {
+.input-area #guide-input:focus {
     border: 1px solid rgb(71, 79, 190);
 }
 
 /* same checkbox */
-#same-checkbox {
+#input-checkbox {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 /* same checkbox label */
-#same-checkbox label {
+#input-checkbox label {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.5;
@@ -536,17 +536,17 @@ header {
 
     /* guid-area title font */
     .text-area #text-title,
-    .tts-area #tts-title {
+    .input-area #inputbox-title {
         font-size: 18px;
     }
 
     /* same checkbox */
-    #same-checkbox {
+    #input-checkbox {
         margin-top: 20px;
     }
 
     /* same checkbox label */
-    #same-checkbox label {
+    #input-checkbox label {
         font-size: 15px;
     }
 
@@ -601,13 +601,13 @@ header {
     }
 
     .text-area,
-    .tts-area {
+    .input-area {
         margin: 0 20px;
     }
 
     /* guid-area title font */
     .text-area #text-title,
-    .tts-area #tts-title {
+    .input-area #inputbox-title {
         font-size: 18px;
         font-weight: 500;
         line-height: 1.5;
@@ -616,22 +616,22 @@ header {
 
     /* guide-area textarea */
     .text-area #guide-text,
-    .tts-area #guide-tts {
+    .input-area #guide-input {
         font-size: 16px;
     }
 
-    .tts-area {
+    .input-area {
         position: relative;
     }
     /* same checkbox */
-    #same-checkbox {
+    #input-checkbox {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
 
     /* same checkbox label */
-    #same-checkbox label {
+    #input-checkbox label {
         font-size: 14px;
         font-weight: 400;
         line-height: 1.5;
