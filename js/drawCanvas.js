@@ -20,6 +20,10 @@ let rateData = [];
 
 let drawCanvasTop = drawCanvas.getBoundingClientRect().top;
 
+// code
+const coordinateCodeArea = document.querySelector("#coordinate-code");
+const copyButton = document.querySelector(".copy-btn");
+
 // Mouse
 drawCanvas.addEventListener("mousedown", function (event) {
     handleMouseDown(event);
@@ -33,6 +37,7 @@ drawCanvas.addEventListener("mousemove", function (event) {
 drawCanvas.addEventListener("mouseup", function (event) {
     handleMouseUp(event);
     data.push({ endX: endX, endY: endY });
+    coordinateCodeArea.innerText = `startRateX: ${startRateX}, startRateY: ${startRateY}, endRateX: ${currentRateX}, endRateY: ${currentRateY}`;
 });
 
 drawCanvas.addEventListener("mouseout", function () {
@@ -58,6 +63,7 @@ drawCanvas.addEventListener("touchmove", function (event) {
 drawCanvas.addEventListener("touchend", function (event) {
     handleTouchUp(event);
     data.push({ endX: endX, endY: endY });
+    coordinateCodeArea.innerText = `startRateX: ${startRateX}, startRateY: ${startRateY}, endRateX: ${currentRateX}, endRateY: ${currentRateY}`;
 });
 
 // mouse
@@ -125,6 +131,7 @@ function handleDraw(currentX, currentY) {
     } else {
         drawContext.fillRect(startX, startY, currentX - startX, currentY - startY);
     }
+    rateCalcurate(currentX, currentY);
 }
 
 function handleTouchDraw(currentX, currentY) {
@@ -134,4 +141,17 @@ function handleTouchDraw(currentX, currentY) {
     } else {
         drawContext.fillRect(startX, startY - drawCanvasTop, currentX - startX, currentY - startY);
     }
+    rateCalcurate(currentX, currentY);
+}
+
+copyButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    copy();
+    console.log("copy!");
+});
+
+function copy() {
+    coordinateCodeArea.select();
+    document.execCommand("copy");
+    coordinateCodeArea.setSelectionRange(0, 0);
 }

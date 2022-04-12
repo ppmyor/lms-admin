@@ -336,7 +336,8 @@ header {
 
 /* guid-area title font */
 .text-area #text-title,
-.input-area #inputbox-title {
+.input-area #inputbox-title,
+.code-area #code-title {
     font-size: 13px;
     font-weight: 500;
     line-height: 1.5;
@@ -345,7 +346,8 @@ header {
 
 /* guide-area textarea */
 .text-area #guide-text,
-.input-area #guide-input {
+.input-area #guide-input,
+.code-area #coordinate-code {
     display: block;
     margin: 10px auto 10px auto;
     width: 100%;
@@ -373,6 +375,22 @@ header {
     font-size: 12px;
     font-weight: 400;
     line-height: 1.5;
+}
+
+/* code Area */
+.code-area {
+    position: relative;
+    margin: 10px 30px;
+}
+
+/* copy button */
+.copy-btn {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgb(85, 85, 85);
+    border-radius: 50px;
+    color: #fff;
 }
 
 /* next image button */
@@ -530,13 +548,15 @@ header {
     }
 
     /* guide area frame */
-    .guide-area {
+    .guide-area,
+    .code-area {
         margin: 30px 10px 0;
     }
 
     /* guid-area title font */
     .text-area #text-title,
-    .input-area #inputbox-title {
+    .input-area #inputbox-title,
+    .code-area #code-title {
         font-size: 18px;
     }
 
@@ -600,6 +620,10 @@ header {
         margin: 10px 30px;
     }
 
+    .code-area {
+        margin: 50px 50px 0;
+    }
+
     .text-area,
     .input-area {
         margin: 0 20px;
@@ -607,7 +631,8 @@ header {
 
     /* guid-area title font */
     .text-area #text-title,
-    .input-area #inputbox-title {
+    .input-area #inputbox-title,
+    .code-area #code-title {
         font-size: 18px;
         font-weight: 500;
         line-height: 1.5;
@@ -616,13 +641,15 @@ header {
 
     /* guide-area textarea */
     .text-area #guide-text,
-    .input-area #guide-input {
+    .input-area #guide-input,
+    .code-area #coordinate-code {
         font-size: 16px;
     }
 
     .input-area {
         position: relative;
     }
+
     /* same checkbox */
     #input-checkbox {
         position: absolute;
