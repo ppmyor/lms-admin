@@ -13,12 +13,16 @@ drawContext.strokeStyle = "rgb(0, 0, 0)";
 drawCanvas.globalAlpha = 0.5;
 
 let isFill = false;
-
+let isClicked = false;
 let isDown = false;
 let data = [];
 let rateData = [];
 
 let drawCanvasTop = drawCanvas.getBoundingClientRect().top;
+
+// guide text
+const guideText = document.querySelector("#guide-text");
+let currentGuideText = "";
 
 // code
 const coordinateCodeArea = document.querySelector("#coordinate-code");
@@ -35,9 +39,10 @@ drawCanvas.addEventListener("mousemove", function (event) {
 });
 
 drawCanvas.addEventListener("mouseup", function (event) {
+    isClicked = true;
     handleMouseUp(event);
     data.push({ endX: endX, endY: endY });
-    coordinateCodeArea.innerText = `startRateX: ${startRateX}, startRateY: ${startRateY}, endRateX: ${currentRateX}, endRateY: ${currentRateY}`;
+    coordinateCodeArea.innerText = `const coordinate = {startRateX: ${startRateX}, startRateY: ${startRateY}, endRateX: ${currentRateX}, endRateY: ${currentRateY}}`;
 });
 
 drawCanvas.addEventListener("mouseout", function () {
@@ -63,7 +68,7 @@ drawCanvas.addEventListener("touchmove", function (event) {
 drawCanvas.addEventListener("touchend", function (event) {
     handleTouchUp(event);
     data.push({ endX: endX, endY: endY });
-    coordinateCodeArea.innerText = `startRateX: ${startRateX}, startRateY: ${startRateY}, endRateX: ${currentRateX}, endRateY: ${currentRateY}`;
+    coordinateCodeArea.innerText = `const coordinate = {startRateX: ${startRateX}, startRateY: ${startRateY}, endRateX: ${currentRateX}, endRateY: ${currentRateY}}`;
 });
 
 // mouse
@@ -155,3 +160,8 @@ function copy() {
     document.execCommand("copy");
     coordinateCodeArea.setSelectionRange(0, 0);
 }
+
+const handleGuideTextChange = () => {
+    currentGuideText = guideText.value;
+    coordinateCodeArea.innerText = `const page = "${currentGuideText}"`;
+};

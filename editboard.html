@@ -154,7 +154,13 @@
                         <div class="guide-area">
                             <div class="text-area">
                                 <h3 id="text-title">가이드용 텍스트</h3>
-                                <textarea name="guide" id="guide-text" cols="30" rows="10"></textarea>
+                                <textarea
+                                    name="guide"
+                                    id="guide-text"
+                                    cols="30"
+                                    rows="10"
+                                    onchange="handleGuideTextChange()"
+                                ></textarea>
                             </div>
                             <div class="input-area">
                                 <h3 id="inputbox-title">input box용 정답 텍스트</h3>
