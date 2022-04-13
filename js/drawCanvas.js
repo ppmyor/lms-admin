@@ -26,6 +26,7 @@ let currentGuideText = "";
 
 // code
 const coordinateCodeArea = document.querySelector("#coordinate-code");
+const guideCodeArea = document.querySelector("#guide-text-code");
 const copyButton = document.querySelector(".copy-btn");
 
 // Mouse
@@ -163,5 +164,5 @@ function copy() {
 
 const handleGuideTextChange = () => {
     currentGuideText = guideText.value;
-    coordinateCodeArea.innerText = `const page = "${currentGuideText}"`;
+    guideCodeArea.innerText = `const page = "${currentGuideText}"`;
 };
