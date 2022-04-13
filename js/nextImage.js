@@ -3,20 +3,21 @@ const currentImageArea = document.querySelector(".current-image-area");
 const currentImage = document.querySelector(".current-image");
 const waitImages = document.querySelectorAll(".wait-image");
 
-let pageNum = 1;
-const pageName = "SD12";
+let currentPageNum = 1;
+
 const fileFormat = currentImage.src.includes("jpg") ? "jpg" : "jpeg";
 const FILE_URL = `./assets/${pageName}/image/`;
+
 nextImageBtn.addEventListener("click", function (event) {
     event.preventDefault();
-    if (pageNum > waitImages.length) {
+    if (currentPageNum > waitImages.length) {
         return;
     }
 
     document.querySelector(".current-image").remove();
-    pageNum += 1;
+    currentPageNum += 1;
     const newImage = document.createElement("img");
-    newImage.src = `${FILE_URL}${pageNum}.jpg`;
+    newImage.src = `${FILE_URL}${currentPageNum}.jpg`;
     newImage.alt = "#";
     newImage.classList.add("current-image");
     currentImageArea.appendChild(newImage);
@@ -24,7 +25,7 @@ nextImageBtn.addEventListener("click", function (event) {
 
 for (const image of waitImages) {
     image.addEventListener("click", function (event) {
-        if (pageNum > waitImages.length) {
+        if (currentPageNum > waitImages.length) {
             return;
         }
         const clickedImageSrc = event.target.src;
@@ -35,7 +36,7 @@ for (const image of waitImages) {
         newImage.classList.add("current-image");
         currentImageArea.append(newImage);
 
-        pageNum =
+        currentPageNum =
             fileFormat === "jpg" ? parseInt(clickedImageSrc.slice(-5, -4)) : parseInt(clickedImageSrc.slice(-6, -5));
     });
 }
